@@ -40,5 +40,8 @@
 img/*eps-converted-to.pdf
 pdf/
 *.pdf
+*.loa
+
+### User files ###
 *.swp
 *.swo
