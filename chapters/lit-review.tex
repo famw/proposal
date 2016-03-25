@@ -3,8 +3,6 @@
 \section{SpelunkBots} TBD
 
 \subsection{Spelunky}
-% Colocar uma foto ilustrativa em algum lugar Falar mais sobre as áreas?  Falar
-% mais sobre os itens?
 Spelunky \cite{SPELUNKYWEB} é um jogo onde o jogador incorpora um aventureiro
 que decide explorar uma caverna misteriosa. O local contém tesouros fabulosos,
 mas também está repleto de perigos. O objetivo principal do jogador é explorar
@@ -12,8 +10,21 @@ estes túneis subterrâneos e coletar a maior quantia de tesouros possível
 enquanto evita ser abatido pelos diversos inimigos e armadilhas espalhadas pelo
 ambiente. O jogo 2D segue o estilo \textit{platformer} - estilo de jogo
 que envolve guiar um personagem através de plataformas suspensas e obstáculos
-para obter progresso no jogo - e emprega alguns elementos do gênero
-\textit{roguelike}, como geração procedural e morte permanente.
+para obter progresso no jogo.
+
+O jogo faz uso de alguns dos elementos-chave do gênero \textit{roguelike}, como
+\textbf{geração procedural} e \textbf{morte permanente}. Os níveis em Spelunky
+são gerados proceduralmente - ou seja, utiliza um algoritmo capaz de gerar
+automáticamente os elementos que irão compor o nível - fazendo com que cada
+partida seja única. Isto significa que não existe uma maneira de se ``decorar''
+Spelunky, pois ao início de cada partida o mapa é gerado de maneira única e os
+tesouros, itens e obstáculos são dispostos de maneira diferente, fazendo com que
+o jogador tenha que aprender a lidar com os elementos de forma individual,
+combinar este conhecimento e estabelecer uma estratégia para vencer seus
+obstáculos e ser bem sucedido. Além disso, o jogo conta com o conceito de morte
+permanente, que faz com que o jogador, ao ter o seu número de vidas esgotado,
+tenha que recomeçar o jogo desde o seu início, perdendo todo o progresso obtido
+até então.
 
 O jogo é dividido em 4 áreas principais: \textbf{As Minas}, \textbf{A Selva},
 \textbf{As Cavernas De Gelo} e \textbf{O Templo}. Cada área possúi um estilo de
@@ -35,42 +46,27 @@ com o jogador em troca de tesouros. É possível, inclusive, tentar furtar itens
 destes comerciantes. Contudo, se o jogador o fizer, todos os comerciantes
 ficarão extremamente irritados e passarão a caçar o explorador com espingardas.
 
-Os níveis em Spelunky são gerados proceduralmente - ou seja, utilizando um
-algoritmo capaz de gerar os elementos que irão compor o nível - fazendo com que
-cada partida seja única. Isto significa que não existe uma maneira de se
-``decorar'' Spelunky, pois ao início de cada partida o mapa é gerado de maneira
-única e os tesouros, itens e obstáculos são dispostos de maneira diferente,
-fazendo com que o jogador tenha que aprender a lidar com os elementos de forma
-individual, combinar este conhecimento e estabelecer uma estratégia para vencer
-seus obstáculos e ser bem sucedido.
-
-Além disso, o jogo conta com o conceito de morte permanente, que faz com que o
-jogador, ao ter o seu número de vidas esgotado, tenha que recomeçar o jogo desde
-o seu início, perdendo todo o progresso obtido até então.
-
 O jogo foi desenvolvido por Derek Yu - utilizando o motor de desenvolvimento de
 jogos \textit{GameMaker} (Versão 8) - e lançado gratuitamente para a plataforma
 \textit{Windows} em dezembro de 2008\cite{SPELUNKYRELEASE}. No fim de 2009, o
 criador optou por liberar o código fonte do jogo, permitindo sua distribuição
 não-comercial e modificação\cite{SPELUNKYLICENSE}.
 
-O uso do GameMaker para o desenvolvimento do jogo faz com que seja possível o
-uso de ferramentas que facilitam o trabalho do desenvolvedor. Contando com
-funcionalidades como editores de \textit{scripts}\footnote{Código desenvolvido
-para o controle dos comportamentos dos elementos do jogo.} e de
+O uso do motor GameMaker para o desenvolvimento do jogo faz com que seja
+possível o uso de ferramentas que facilitam o trabalho do desenvolvedor.
+Contando com funcionalidades como editores de \textit{scripts}\footnote{Código
+desenvolvido para o controle dos comportamentos dos elementos do jogo.} e de
 \textit{sprites}\footnote{Elementos visuais do jogo, tais como o personagem, o
 fundo, os inimigos. Representados como uma ou mais imagens, permitindo que as
 mesmas sejam animadas.}, gerenciadores de eventos, entre outras
-\cite{GMAKER8DOCS}, o GameMaker oferece um ótimo suporte ao desenvolvedor para
-a criação de jogos.
+\cite{GMAKER8DOCS}, o GameMaker oferece um ótimo suporte ao desenvolvedor para a
+criação de jogos.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunky-pc-screen.png}
-\caption
-    {\label{fig:spelunky-gameplay}Exemplo de partida de spelunky, mostrando
-    elementos do jogo como o jogador, a caverna, os inimigos, os tesouros,
-    entre outros.}
-\end{figure}
+\caption {\label{fig:spelunky-gameplay}Exemplo de partida de spelunky, mostrando
+elementos do jogo como o jogador, a caverna, os inimigos, os tesouros, entre
+outros.} \end{figure}
 
 \subsection{Competição SpelunkBots}
 % O framework A competição
@@ -82,8 +78,7 @@ TBD
 Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz de
 perceber o ambiente onde está situado, através de seus sensores, podendo
 executar ações nesse ambiente conforme sua necessidade através de seus
-atuadores.
-\cite{Russell:1995:AIM:193191}
+atuadores.  \cite{Russell:1995:AIM:193191}
 
 Para exemplificar, podemos tomar como exemplo o ser humano, que consegue
 perceber o ambiente através de seus olhos e ouvidos, por exemplo, conseguindo
@@ -125,8 +120,8 @@ para determinar as possíveis ações a serem executadas para alcançá-lo.
 
 \subsection{Agentes Baseados em Utilidades}
 
-Para alguns tipos de agente, chegar no objetivo pode não ser suficiente,
-podendo existir outros fatores na busca desse objetivo que possam influenciar no
+Para alguns tipos de agente, chegar no objetivo pode não ser suficiente, podendo
+existir outros fatores na busca desse objetivo que possam influenciar no
 resultado final do agente. Por exemplo, um agente que joga um determinado jogo
 pode terminar o jogo com um determinado número de pontos, porém, é mais
 satisfatório que o mesmo termine o jogo com o \textbf{maior} número de pontos
@@ -145,9 +140,9 @@ um determinado agente.
 
 Primeiramente, os ambientes podem ser \textbf{acessíveis} ou
 \textbf{inacessíveis} (também chamados de \textbf{observáveis} ou \textbf{não
-observáveis}), sendo um ambiente acessível aquele que possibilita que o
-agente explore todas as suas características. Ambientes acessíveis permitem que
-o agente não precise guardar informações sobre o mesmo, visto que pode sempre
+observáveis}), sendo um ambiente acessível aquele que possibilita que o agente
+explore todas as suas características. Ambientes acessíveis permitem que o
+agente não precise guardar informações sobre o mesmo, visto que pode sempre
 ``olhar'' para o ambiente e extraír as informações necessárias.
 
 Também existem os ambientes \textbf{determinísticos} e \textbf{não
@@ -173,12 +168,9 @@ finito de possíveis estados.
 
 \subsection{Agentes BDI}
 
-\begin{itemize}
-    \item Falar que é uma arquitetura de agentes
-    \item Explicar porque usar
-    \item Explicar os conceitos de crenças, desejos e intenções
-    \item Explicar suas limitações
-\end{itemize}
+\begin{itemize} \item Falar que é uma arquitetura de agentes \item Explicar
+porque usar \item Explicar os conceitos de crenças, desejos e intenções \item
+Explicar suas limitações \end{itemize}
 
 \section{Frameworks de Inteligência Artificial}
 
@@ -198,11 +190,8 @@ TBD
 
 \section{Aprendizado de Máquina}
 
-\begin{itemize}
-    \item O que é
-    \item Para que serve
-    \item Como se faz (forma abstrata)
-\end{itemize}
+\begin{itemize} \item O que é \item Para que serve \item Como se faz (forma
+abstrata) \end{itemize}
 
 \subsection{Aprendizado por Reforço}
 
