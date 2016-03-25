@@ -138,11 +138,38 @@ maneira possível.
 
 \subsection{Ambiente}
 
-\begin{itemize}
-    \item Falar o que é um ambiente, e como é a interação do agente com o mesmo
-    \item Falar dos tipos de ambiente (determinístico, estocástico, etc.)
-    \item Dar exemplos de ambientes
-\end{itemize}
+Todas as ações que um agente pode executar, bem como suas percepções, ocorrem no
+ambiente onde o agente está inserido. Porém, existem diferentes tipos de
+ambientes, que, dependendo de sua característica, podem dificultar o trabalho de
+um determinado agente.
+
+Primeiramente, os ambientes podem ser \textbf{acessíveis} ou
+\textbf{inacessíveis} (também chamados de \textbf{observáveis} ou \textbf{não
+observáveis}), sendo um ambiente acessível aquele que possibilita que o
+agente explore todas as suas características. Ambientes acessíveis permitem que
+o agente não precise guardar informações sobre o mesmo, visto que pode sempre
+``olhar'' para o ambiente e extraír as informações necessárias.
+
+Também existem os ambientes \textbf{determinísticos} e \textbf{não
+determinísticos}, tratando-se de um ambiente deterministico aquele onde um
+agente consegue prever o próximo estado da sua busca pelo objetivo através da
+aplicação das ações escolhidas. Assim, um ambiente não determinístico não
+garante que a ação executada pelo agente irá surtir o efeito esperado.
+
+Além destes, existem ambientes \textbf{episódicos} ou \textbf{sequenciais},
+sendo ambientes episódicos aqueles onde um episódio não influencia no próximo.
+Dessa forma, ambientes sequenciais guardam algum tipo de memória dos epoisódios
+anteriories, fazendo o uso desta nos episódios subsequentes, gravando outras
+informações sobre tais episódios caso necessário.
+
+Caso um ambiente possa sofrer mudanças sem ações do agente, será um ambiente
+\textbf{dinâmico}, caso contrário, chamamos esse tipo de ambiente de
+\textbf{estático}. Ambientes estáticos são fáceis de se tratar, visto que é
+possível ter um maior controle sobre o mesmo.
+
+Por fim, classificamos os ambientes como \textbf{discretos} ou
+\textbf{contínuos}, sendo ambientes discretos aqueles onde temos um número
+finito de possíveis estados.
 
 \subsection{Agentes BDI}
 
