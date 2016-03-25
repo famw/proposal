@@ -168,9 +168,81 @@ finito de possíveis estados.
 
 \subsection{Agentes BDI}
 
-\begin{itemize} \item Falar que é uma arquitetura de agentes \item Explicar
-porque usar \item Explicar os conceitos de crenças, desejos e intenções \item
-Explicar suas limitações \end{itemize}
+O estudo de agentes racionais faz com que seja necessário, além de entender os
+aspectos e característica dos mesmos, entender como é possível realizar a
+implementação desse tipo de agente.
+
+A aplicação de técnicas convencionais para o desenvolvimento desses agentes
+mostrou-se despendiosa e difícil de ser feita, verificada e mantida
+\cite{BDIFROMTHEORYTOPRACTICE}, sendo então necessária o uso de outras técnicas
+para a implementação dos mesmos.
+
+Nesse contexto, surge a arquitetura de agentes BDI (\textit{Belief, Desire,
+Intentions}), capaz de modelar agentes racionais de uma maneira mais adequada.
+
+Tal arquitetura conta com alguns conceitos que permitem modelar agentes
+racionais, explicados a seguire:
+
+\begin{description}
+    \item [Crenças (\textit{Beliefs})]
+        Trata-se de tudo aquilo que o agente acredita saber sobre o ambiente,
+        é chamado de ``crença'' pois tal informação pode vir a não ser verdade.
+        As crenças podem vir a ser atualizadas a cada nova percepção do ambiente
+        feita pelo agente, sendo armazenadas na memória do agente.
+    \item [Desejos (\textit{Desires})]
+        Além de uma base de crenças, é necessário que um agente saiba o que deve
+        ser feito para alcançar os seus objetivos. Tais ações são chamadas de
+        desejos, e, além de representar o que um agente deseja fazer, também
+        representam os custos associados com a busca por esse desejo.
+    \item [Intenções (\textit{Intentions})]
+        Diferentemente dos desejos, uma intenção é algo com o qual o agente se
+        compromete a fazer em busca dos seus objetivos, dessa forma, podemos ver
+        as intenções como as ações que efetivamente serão executadas para
+        alcançar os objetivos.
+\end{description}
+
+Com estes três conceitos, é possível definir um algoritmo interpretador
+BDI. O algoritmo ~\ref{alg:BDIINTERPRETERALG} como é feito o uso desses
+conceitos \cite{BDIFROMTHEORYTOPRACTICE}.
+
+\begin{algorithm}[htb]
+\begin{center}
+    % Um exemplo de algoritmo utilizando a pacote 'algorithmic'
+    %\algsetup{linenosize=\small,linenodelimiter=.}
+    \begin{algorithmic}[1]
+        \STATE inicializar();
+        \STATE
+        \WHILE {true}
+            \STATE opções $\gets$ gerar-opções(fila-de-eventos);
+            \STATE opções-escolhidas $\gets$ deliberar(opções);
+            \STATE atualizar-intenções(opções-escolhidas);
+            \STATE executar();
+            \STATE buscar-novos-eventos-externos();
+            \STATE esquecer-atitutes-de-sucesso();
+            \STATE esquecer-atitudes-impossíveis();
+        \ENDWHILE
+    \end{algorithmic}
+\end{center}
+\caption[Algoritmo para representar um interpretador BDI.]
+    {\label{alg:BDIINTERPRETERALG}
+        Algoritmo para representar um interpretador BDI, utilizando os conceitos
+        de crenças, desejos e intenções para a sua implementação.}
+\end{algorithm}
+
+As possíveis opções são escolhidas a cada novo ciclo, sendo sempre buscadas de
+uma fila de eventos ocorridos, após, é escolhida uma opção a ser seguida,
+tornando-se então essa opção uma intenção do agente. Caso haja uma intenção a
+ser executada, o agente então a executa. Após, é atualizada a fila de eventos
+com os eventos externos ocorridos. Por fim, o agente esquece os desejos já
+obtidos, bem como as intenções satisfeitas, além de esquecer os desejos e
+intenções impossíveis.
+
+Por fim, cabe ressaltar que tal arquitetura possui algumas limitações, bem como
+a incapacidade de fazer com que um agente BDI ``aprenda'' e adapte seu
+comportamento baseado no aprendizado obtido, além de não haver nenhuma
+consideração arquitetural sobre a modelagem de sistemas multi-agentes
+\cite{BDIMODELOFAGENCY}, sendo assim necessário explorar outras técnicas caso
+seja necessário que o agente faça uso dessas características.
 
 \section{Frameworks de Inteligência Artificial}
 
