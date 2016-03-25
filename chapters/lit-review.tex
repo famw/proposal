@@ -159,12 +159,41 @@ informações sobre tais episódios caso necessário.
 
 Caso um ambiente possa sofrer mudanças sem ações do agente, será um ambiente
 \textbf{dinâmico}, caso contrário, chamamos esse tipo de ambiente de
-\textbf{estático}. Ambientes estáticos são fáceis de se tratar, visto que é
-possível ter um maior controle sobre o mesmo.
+\textbf{estático}. Caso o ambiente não mude de acordo com o tempo, porém, o
+agente mude sua forma de agir (melhorando sua atuação, por exemplo), chamamos
+o ambiente de \textbf{semidinâmico}.
 
 Por fim, classificamos os ambientes como \textbf{discretos} ou
 \textbf{contínuos}, sendo ambientes discretos aqueles onde temos um número
 finito de possíveis estados.
+
+Dados os seguintes tipos:
+
+\begin{enumerate}
+    \item Acessível
+    \item Determinístico
+    \item Episódico
+    \item Estático
+    \item Discreto
+\end{enumerate}
+
+Podemos exemplificar os tipos de ambientes através da
+tabela~\ref{tab:ENVEXAMPLETABLE}:
+
+\begin{table}[htb]
+    \begin{center}
+        \caption{\label{tab:ENVEXAMPLETABLE} Tabela exemplificando os
+        diferentes tipos de ambientes}
+        \begin{tabular}{| l | c | c | c | c | c |} \hline
+            \textbf{Tipo de Ambiente}         & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\ \hline
+            Partida de xadrez sem relógio     & Sim        & Sim        & Não        & Não        & Não        \\ \hline
+            Corrida de táxi                   & Não        & Não        & Não        & Não        & Não        \\ \hline
+            Partida de poker                  & Não        & Não        & Não        & Sim        & Sim        \\ \hline
+            Sistema para diagnósticos médicos & Não        & Não        & Não        & Não        & Não        \\ \hline
+            Sistema para análise de imagens   & Sim        & Sim        & Sim        & Semi       & Não        \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \subsection{Agentes BDI}
 
@@ -202,7 +231,7 @@ racionais, explicados a seguire:
 \end{description}
 
 Com estes três conceitos, é possível definir um algoritmo interpretador
-BDI. O algoritmo ~\ref{alg:BDIINTERPRETERALG} como é feito o uso desses
+BDI. O algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso desses
 conceitos \cite{BDIFROMTHEORYTOPRACTICE}.
 
 \begin{algorithm}[htb]
