@@ -115,7 +115,7 @@ Falar em especifico sobre o SpelunkBots
 Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz de
 perceber o ambiente onde está situado, através de seus sensores, podendo
 executar ações nesse ambiente conforme sua necessidade através de seus
-atuadores.  \cite{Russell:1995:AIM:193191}
+atuadores.\cite{Russell:1995:AIM:193191}
 
 Para exemplificar, podemos tomar como exemplo o ser humano, que consegue
 perceber o ambiente através de seus olhos e ouvidos, por exemplo, conseguindo
@@ -177,11 +177,11 @@ explore todas as suas características. Ambientes acessíveis permitem que o
 agente não precise guardar informações sobre o mesmo, visto que pode sempre
 ``olhar'' para o ambiente e extraír as informações necessárias.
 
-Também existem os ambientes \textbf{determinísticos} e \textbf{não
-determinísticos}, tratando-se de um ambiente deterministico aquele onde um
-agente consegue prever o próximo estado da sua busca pelo objetivo através da
-aplicação das ações escolhidas. Assim, um ambiente não determinístico não
-garante que a ação executada pelo agente irá surtir o efeito esperado.
+Também existem os ambientes \textbf{determinísticos} ou \textbf{estocásticos},
+tratando-se de um ambiente deterministico aquele onde um agente consegue prever
+o próximo estado da sua busca pelo objetivo através da aplicação das ações
+escolhidas. Assim, um ambiente não determinístico não garante que a ação
+executada pelo agente irá surtir o efeito esperado.
 
 Além destes, existem ambientes \textbf{episódicos} ou \textbf{sequenciais},
 sendo ambientes episódicos aqueles onde um episódio não influencia no próximo.
@@ -304,10 +304,54 @@ consideração arquitetural sobre a modelagem de sistemas multi-agentes
 \cite{BDIMODELOFAGENCY}, sendo assim necessário explorar outras técnicas caso
 seja necessário que o agente faça uso dessas características.
 
-
 \section{Planejamento}
 
-TBD
+A solução de muitos tipos de problemas pode ser expressa através de uma
+sequência de ações a serem executadas - isto é, um plano. Portanto, em muitos
+dos casos, é necessário que um agente consiga pensar sobre o que deve ser feito
+para resolver o problema o qual foi designado, seguindo as ações que resolvam o
+mesmo.
+
+Tomemos como exemplo um agente em um ambiente estocástico - onde não se consegue
+ter certeza sobre o resultado da execução de uma ação - e não observável, como
+não temos certeza sobre o estado do ambiente e nem sobre o resultado de nossas
+ações, precisamos estabelecer um plano, onde podemos tratar as dificuldades que
+o ambiente nos impõe.
+
+Portanto, podemos definir um sistema planejador como um sistema que tem como
+saída um plano a ser executado e como entrada os seguintes componentes:
+
+\begin{description}
+    \item [Objetivos]
+        Também chamados de intenções ou tarefas, é algo que o agente deseja
+        obter, manter ou evitar.
+    \item [Crenças]
+        Tudo o que um agente sabe sobre o estado do ambiente.
+    \item [Ações]
+        Tudo o que um agente pode executar no ambiente onde está inserido.
+\end{description}
+\cite{Woolridge:2001:IMS:559667}
+
+A ideia principal para a construção de um sistema planejador se dá através da
+extensão da representação de estados, objetivos e ações com o uso de algum tipo
+de linguagem formal (normalmente lógica de primeira ordem, ou algum subconjunto
+da mesma). Isso permite com o planejador possa fazer uma ligação direta entre
+as ações e os estados, podendo, portanto, considerar apenas ações relevantes
+para o plano.
+\cite{Russell:1995:AIM:193191}
+
+As ações passam a ter pré-condições e efeitos, que faz com que o agente, antes
+de executar uma ação, tenha que ter um conhecimento prévio do ambiente. Assim,
+após a execução da mesma, os seus efeitos fazem com que seja alterado o
+conhecimento sobre o ambiente.
+
+O uso de uma linguagem formal nessa tarefa permite com que os componentes de um
+planejador sejam expressos de uma maneira onde seja possível fazer operarações
+sobre tais conjecturas, facilitando o processo de geração de um plano.
+
+Um dos primeiros planejadores a surgir foi o STRIPS \cite{STRIPSNEWAPPROACH},
+em $1971$ sendo utilizado como referência para a solução de muitos problemas de
+planejamento até hoje.
 
 \section{Aprendizado de Máquina}
 
