@@ -1,8 +1,6 @@
 \chapter{\label{chap:lit-review}Revisão Bibliográfica}
 
-\section{SpelunkBots} TBD
-
-\subsection{Spelunky}
+\section{Spelunky}
 Spelunky \cite{SPELUNKYWEB} é um jogo onde o jogador incorpora um aventureiro
 que decide explorar uma caverna misteriosa. O local contém tesouros fabulosos,
 mas também está repleto de perigos. O objetivo principal do jogador é explorar
@@ -68,12 +66,52 @@ criação de jogos.
 elementos do jogo como o jogador, a caverna, os inimigos, os tesouros, entre
 outros.} \end{figure}
 
-\subsection{Competição SpelunkBots}
 
-TBD
+
+\section{Plataformas de Testes para Inteligência Artificial}
+Existe uma relação mutualmente benéfica entre a área de inteligência artificial
+e jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
+técnicas e algoritmos de inteligência artificial com o intuito de enriquecer
+seu conteúdo. O jogo \textbf{Black \& White} da desenvolvedora \textit{Lionhead
+Studios}, por exemplo, incorporou as técnicas de agentes BDI, árvores de
+decisão e redes neurais para ditar o comportamento de alguns seus personagens
+\cite{TOPAIGAMES}. Já o jogo \textbf{F.E.A.R}, da desenvolvedora
+\textit{Monolith Productions}, utilizou os conceitos de planejamento para
+aumentar o realismo das decisões tomadas por seus agentes.\cite{FEARPLANNING}.
+
+Do outro lado, o campo da inteligência artificial se beneficia ao utilizar os
+jogos como plataformas de teste para suas técnicas e algoritmos. Jogos digitais
+são capazes de capturar a complexidade de situações do mundo real e, ao mesmo
+tempo, manterem-se relativamente simples e baratos. Podem replicar inúmeras
+situações e ambientes -- existem diversos gêneros de jogos, variando desde
+jogos educacionais até jogos de tiro em primeira pessoa -- e até mesmo criar
+cenários impossíveis ou impraticáveis no mundo real. Ademais, possuem a
+vantagem de serem programas de computador, o que significa que, por muitas
+vezes, podem acelerar a velocidade na qual testes são executados, ou ainda
+executar múltiplos testes em paralelo. Estas são algumas das características
+dos jogos digitais que fazem com que sejam atraentes para pesquisadores da área
+de inteligência artificial.
+
+Tendo este apanhado de informações em mente, pesquisadores e entusiastas da
+área acabam desenvolvendo \textit{frameworks} de inteligência artificial em
+cima de jogos existentes para servir de plataforma de teste. Um exemplo disso
+seria o \textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para o jogo
+\textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
+especificamente para isso, como foi o caso do projeto \textbf{TORCS, The Open
+Racing Car Simulator}, um simulador de corridas de carro que permite que
+desenvolvedores programem a inteligência de carros e compitam entre sí
+\cite{TORCSWEB}. Estes \textit{frameworks} acabam dando origem a competições,
+servindo como base comum para o desenvolvimento e aplicação de técnicas de
+inteligência artificial para os concorrentes.
+
+
+
+\section{SpelunkBots}
+Falar em especifico sobre o SpelunkBots
+
+
 
 \section{Agentes Racionais}
-
 Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz de
 perceber o ambiente onde está situado, através de seus sensores, podendo
 executar ações nesse ambiente conforme sua necessidade através de seus
@@ -89,7 +127,6 @@ tipo de agente que, no ambiente em que está inserido, toma ações que o deixam
 mais próximo de completar os objetivos os quais o mesmo está comprometido.
 
 \subsection{Agentes Reflexivos}
-
 Agentes reflexivos são agentes que executam ações baseados em alguma situação
 percebida. Por exemplo, podemos ter um agente reflexivo que poderá fazer uma
 postagem em uma rede social, dado que uma outra pessoa fez uma postagem. Tal
@@ -100,7 +137,6 @@ Estes agentes têm como principal característica não guardarem tipo algum de
 informação das suas experiências passadas, sendo apenas reativos.
 
 \subsection{Agentes com Memória}
-
 Diferentemente dos agentes reflexivos, agentes com memória são capazes de
 guardar informações sobre as experiências passadas, podendo fazer o uso das
 mesmas para alcançar seus objetivos. A lembrança das experiência passadas
@@ -109,7 +145,6 @@ exemplo, sejam evitadas ações não efetivas ou que seja escolhida, entre um
 conjunto de possíveis ações, a que seja a mais efetiva para o agente.
 
 \subsection{Agentes Baseados em Objetivos}
-
 Além de ter memória, é necessário que um agente saiba quando o mesmo obteve
 sucesso no que se propôs a fazer. Com isso, agentes baseados em objetivos
 conseguem basear suas decisões - ações a tomar - com base na ação que o deixa
@@ -118,7 +153,6 @@ como alcançar esse objetivo, podendo ser usadas técnicas de busca e planejamen
 para determinar as possíveis ações a serem executadas para alcançá-lo.
 
 \subsection{Agentes Baseados em Utilidades}
-
 Para alguns tipos de agente, chegar no objetivo pode não ser suficiente, podendo
 existir outros fatores na busca desse objetivo que possam influenciar no
 resultado final do agente. Por exemplo, um agente que joga um determinado jogo
@@ -131,7 +165,6 @@ ações, escolhendo as que, além de alcançar seu objetivo, façam o mesmo da m
 maneira possível.
 
 \subsection{Ambiente}
-
 Todas as ações que um agente pode executar, bem como suas percepções, ocorrem no
 ambiente onde o agente está inserido. Porém, existem diferentes tipos de
 ambientes, que, dependendo de sua característica, podem dificultar o trabalho de
@@ -195,7 +228,6 @@ tabela~\ref{tab:ENVEXAMPLETABLE}:
 \end{table}
 
 \subsection{Agentes BDI}
-
 O estudo de agentes racionais faz com que seja necessário, além de entender os
 aspectos e característica dos mesmos, entender como é possível realizar a
 implementação desse tipo de agente.
@@ -271,42 +303,6 @@ comportamento baseado no aprendizado obtido, além de não haver nenhuma
 consideração arquitetural sobre a modelagem de sistemas multi-agentes
 \cite{BDIMODELOFAGENCY}, sendo assim necessário explorar outras técnicas caso
 seja necessário que o agente faça uso dessas características.
-
-\section{Plataformas de Testes para Inteligência Artificial} Existe uma relação
-mutualmente benéfica entre a área de inteligência artificial e jogos digitais.
-De um lado, os jogos se beneficiam explorando conceitos, técnicas e algoritmos
-de inteligência artificial com o intuito de enriquecer seu conteúdo. O jogo
-\textbf{Black \& White} da desenvolvedora \textit{Lionhead Studios}, por
-exemplo, incorporou as técnicas de agentes BDI, árvores de decisão e redes
-neurais para ditar o comportamento de alguns seus personagens
-\cite{TOPAIGAMES}. Já o jogo \textbf{F.E.A.R}, da desenvolvedora
-\textit{Monolith Productions}, utilizou os conceitos de planejamento para
-aumentar o realismo das decisões tomadas por seus agentes.\cite{FEARPLANNING}.
-
-Do outro lado, o campo da inteligência artificial se beneficia ao utilizar os
-jogos como plataformas de teste para suas técnicas e algoritmos. Jogos digitais
-são capazes de capturar a complexidade de situações do mundo real e, ao mesmo
-tempo, manterem-se relativamente simples e baratos. Podem replicar inúmeras
-situações e ambientes -- existem diversos gêneros de jogos, variando desde
-jogos educacionais até jogos de tiro em primeira pessoa -- e até mesmo criar
-cenários impossíveis ou impraticáveis no mundo real. Ademais, possuem a
-vantagem de serem programas de computador, o que significa que, por muitas
-vezes, podem acelerar a velocidade na qual testes são executados, ou ainda
-executar múltiplos testes em paralelo. Estas são algumas das características
-dos jogos digitais que fazem com que sejam atraentes para pesquisadores da área
-de inteligência artificial.
-
-Tendo este apanhado de informações em mente, pesquisadores e entusiastas da
-área acabam desenvolvendo \textit{frameworks} de inteligência artificial em
-cima de jogos existentes para servir de plataforma de teste. Um exemplo disso
-seria o \textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para o jogo
-\textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
-especificamente para isso, como foi o caso do projeto \textbf{TORCS, The Open
-Racing Car Simulator}, um simulador de corridas de carro que permite que
-desenvolvedores programem a inteligência de carros e compitam entre sí
-\cite{TORCSWEB}. Estes \textit{frameworks} acabam dando origem a competições,
-servindo como base comum para o desenvolvimento e aplicação de técnicas de
-inteligência artificial para os concorrentes.
 
 
 \section{Planejamento}
