@@ -118,10 +118,10 @@ próprio jogo, como pontuação ou tempo. Muitas vezes, os organizadores da
 competição optam por fazer uso de um sistema de \textit{ranking}, expondo os
 resultados obtidos pelos candidatos. A competição \textbf{The General Video
 Game AI Competition}, que explora o problema de criar controladores genéricos
-de jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Frequentemente, também,
-fazem com que os candidatos joguem entre sí.  Um exemplo disso seria a
-competição que gira em torno de \textbf{Vindinium}, um jogo para a plataforma
-\textit{web} \cite{VINDINIUMWEB}.
+de jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Às vezes, as competições
+fazem com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso
+seria a competição que gira em torno de \textbf{Vindinium}, um jogo para a
+plataforma \textit{web} \cite{VINDINIUMWEB}.
 
 Contudo, a proposta principal da disputa pode ser outra. A competição
 \textbf{Mario AI Competition}, por exemplo, possuia como uma de suas metas a
@@ -141,7 +141,7 @@ candidatos duelam entre sí, isto tende a aumentar a competitividade, pois uma
 solução que funcionou em um ano pode vir a não funcionar tão bem ou até mesmo
 falhar no ano seguinte, tendo em vista que o código será dissecado pelos seus
 rivais. Os resultados das competições costumam ser divulgados também em
-conferências como \textit{IEE Computational Intelligence and Games (CIG)} e
+conferências como \textit{IEEE Computational Intelligence and Games (CIG)} e
 \textit{AAAI Artificial Intelligence in Interactive Digital Entertainment
 (AAIDE)}, além de conferências dedicadas a computação evolutiva, \textit{game
 design}, aprendizado de máquina, entre outras. Algumas competições costumam
@@ -156,57 +156,50 @@ Falar em especifico sobre o SpelunkBots
 
 
 \section{Agentes Racionais}
-Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz de
-perceber o ambiente onde está situado, através de seus sensores, podendo
+Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz
+de perceber o ambiente onde está situado, através de seus sensores, podendo
 executar ações nesse ambiente conforme sua necessidade através de seus
-atuadores.\cite{Russell:1995:AIM:193191}
+atuadores.\cite{Russell:1995:AIM:193191} Para exemplificar, podemos tomar como
+exemplo o ser humano, que consegue perceber o ambiente através de seus olhos e
+ouvidos, por exemplo, conseguindo agir no ambiente com suas partes do corpo,
+como braços, pernas, mãos e etc.  \cite{Russell:1995:AIM:193191}
 
-Para exemplificar, podemos tomar como exemplo o ser humano, que consegue
-perceber o ambiente através de seus olhos e ouvidos, por exemplo, conseguindo
-agir no ambiente com suas partes do corpo, como braços, pernas, mãos e etc.
-\cite{Russell:1995:AIM:193191}
+Portanto, podemos generalizar o conceito de agente racional como todo e
+qualquer tipo de agente que, no ambiente em que está inserido, toma ações que o
+deixam mais próximo de completar os objetivos os quais o mesmo está
+comprometido.
 
-Portanto, podemos generalizar o conceito de agente racional como todo e qualquer
-tipo de agente que, no ambiente em que está inserido, toma ações que o deixam
-mais próximo de completar os objetivos os quais o mesmo está comprometido.
+\textbf{Agentes reflexivos} são agentes que executam ações baseados em alguma
+situação percebida. Por exemplo, podemos ter um agente reflexivo que poderá
+fazer uma postagem em uma rede social, dado que uma outra pessoa fez uma
+postagem. Tal tipo de agente não ``pensará'' sobre a ação que está executando,
+simplesmente a executará baseado no que percebeu anteriormente. Estes agentes
+têm como principal característica não guardarem tipo algum de informação das
+suas experiências passadas, sendo apenas reativos.
 
-\subsection{Agentes Reflexivos}
-Agentes reflexivos são agentes que executam ações baseados em alguma situação
-percebida. Por exemplo, podemos ter um agente reflexivo que poderá fazer uma
-postagem em uma rede social, dado que uma outra pessoa fez uma postagem. Tal
-tipo de agente não ``pensará'' sobre a ação que está executando, simplesmente a
-executará baseado no que percebeu anteriormente.
-
-Estes agentes têm como principal característica não guardarem tipo algum de
-informação das suas experiências passadas, sendo apenas reativos.
-
-\subsection{Agentes com Memória}
-Diferentemente dos agentes reflexivos, agentes com memória são capazes de
-guardar informações sobre as experiências passadas, podendo fazer o uso das
+Diferentemente dos agentes reflexivos, \textbf{agentes com memória} são capazes
+de guardar informações sobre as experiências passadas, podendo fazer o uso das
 mesmas para alcançar seus objetivos. A lembrança das experiência passadas
 possibilita à um agente uma forma de aprender e melhorar, fazendo com que, por
 exemplo, sejam evitadas ações não efetivas ou que seja escolhida, entre um
 conjunto de possíveis ações, a que seja a mais efetiva para o agente.
 
-\subsection{Agentes Baseados em Objetivos}
 Além de ter memória, é necessário que um agente saiba quando o mesmo obteve
-sucesso no que se propôs a fazer. Com isso, agentes baseados em objetivos
-conseguem basear suas decisões - ações a tomar - com base na ação que o deixa
-mais próximo de alcançar seus objetivos. O desafio desse tipo de agente é saber
-como alcançar esse objetivo, podendo ser usadas técnicas de busca e planejamento
-para determinar as possíveis ações a serem executadas para alcançá-lo.
+sucesso no que se propôs a fazer. Com isso, \textbf{agentes baseados em
+objetivos} conseguem basear suas decisões - ações a tomar - com base na ação
+que o deixa mais próximo de alcançar seus objetivos. O desafio desse tipo de
+agente é saber como alcançar esse objetivo, podendo ser usadas técnicas de
+busca e planejamento para determinar as possíveis ações a serem executadas para
+alcançá-lo.
 
-\subsection{Agentes Baseados em Utilidades}
-Para alguns tipos de agente, chegar no objetivo pode não ser suficiente, podendo
-existir outros fatores na busca desse objetivo que possam influenciar no
-resultado final do agente. Por exemplo, um agente que joga um determinado jogo
-pode terminar o jogo com um determinado número de pontos, porém, é mais
+Para alguns tipos de agente, chegar no objetivo pode não ser suficiente,
+podendo existir outros fatores na busca desse objetivo que possam influenciar
+no resultado final do agente. Por exemplo, um agente que joga um determinado
+jogo pode terminar o jogo com um certo número de pontos, porém, é mais
 satisfatório que o mesmo termine o jogo com o \textbf{maior} número de pontos
-possível.
-
-Portanto, tais tipos de agentes são capazes de medir os resultados de suas
-ações, escolhendo as que, além de alcançar seu objetivo, façam o mesmo da melhor
-maneira possível.
+possível. Estes são os \textbf{agentes baseados em utilidade}, que são capazes
+de medir os resultados de suas ações, escolhendo as que, além de alcançar seu
+objetivo, façam o mesmo da melhor maneira possível.
 
 \subsection{Ambiente}
 Todas as ações que um agente pode executar, bem como suas percepções, ocorrem no
@@ -274,18 +267,15 @@ tabela~\ref{tab:ENVEXAMPLETABLE}:
 \subsection{Agentes BDI}
 O estudo de agentes racionais faz com que seja necessário, além de entender os
 aspectos e característica dos mesmos, entender como é possível realizar a
-implementação desse tipo de agente.
-
-A aplicação de técnicas convencionais para o desenvolvimento desses agentes
-mostrou-se despendiosa e difícil de ser feita, verificada e mantida
-\cite{BDIFROMTHEORYTOPRACTICE}, sendo então necessária o uso de outras técnicas
-para a implementação dos mesmos.
+implementação desse tipo de agente. A aplicação de técnicas convencionais para
+o desenvolvimento desses agentes mostrou-se despendiosa e difícil de ser feita,
+verificada e mantida \cite{BDIFROMTHEORYTOPRACTICE}, sendo então necessária o
+uso de outras técnicas para a implementação dos mesmos.
 
 Nesse contexto, surge a arquitetura de agentes BDI (\textit{Belief, Desire,
 Intentions}), capaz de modelar agentes racionais de uma maneira mais adequada.
-
 Tal arquitetura conta com alguns conceitos que permitem modelar agentes
-racionais, explicados a seguire:
+racionais, explicados a seguir:
 
 \begin{description}
     \item [Crenças (\textit{Beliefs})]
@@ -381,13 +371,11 @@ extensão da representação de crenças, objetivos e ações com o uso de algum
 de linguagem formal (normalmente lógica de primeira ordem, ou algum subconjunto
 da mesma). Isso permite que o planejador possa fazer uma ligação direta entre
 as ações e os estados, podendo, portanto, considerar apenas ações relevantes
-para o plano.
-\cite{Russell:1995:AIM:193191}
-
-As ações passam a ter pré-condições e efeitos, que faz com que o agente, antes
-de executar uma ação, tenha que ter um conhecimento prévio do ambiente. Assim,
-após a execução da mesma, seus efeitos fazem com que seja alterado o
-conhecimento sobre o ambiente.
+para o plano. \cite{Russell:1995:AIM:193191} As ações passam a ter
+pré-condições e efeitos, que faz com que o agente, antes de executar uma ação,
+tenha que ter um conhecimento prévio do ambiente. Assim, após a execução da
+mesma, seus efeitos fazem com que seja alterado o conhecimento sobre o
+ambiente.
 
 O uso de uma linguagem formal nessa tarefa permite que os componentes de um
 planejador sejam expressos de uma maneira onde seja possível fazer operarações
