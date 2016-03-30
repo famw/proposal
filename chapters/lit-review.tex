@@ -6,9 +6,9 @@ que decide explorar uma caverna misteriosa. O local contém tesouros fabulosos,
 mas também está repleto de perigos. O objetivo principal do jogador é explorar
 estas cavernas subterrâneas e coletar a maior quantia de tesouros possível
 enquanto evita ser abatido pelos diversos inimigos e armadilhas espalhadas pelo
-ambiente. O jogo 2D segue o estilo \textit{platformer} - estilo de jogo
-que envolve guiar um personagem através de plataformas suspensas e obstáculos
-para obter progresso no jogo.
+ambiente. O jogo 2D segue o estilo \textit{platformer} - estilo de jogo que
+envolve guiar um personagem através de plataformas suspensas e obstáculos para
+obter progresso no jogo.
 
 O jogo faz uso de alguns dos elementos-chave do gênero \textit{roguelike}, como
 \textbf{geração procedural} e \textbf{morte permanente}. Os níveis em Spelunky
@@ -31,30 +31,29 @@ principalmente porque os inimigos vão se tornando cada vez mais fortes. Além d
 áreas principais, existem duas áreas secretas: \textbf{O Mercado Negro} e
 \textbf{A Cidade de Ouro}.
 
-O jogador, inicialmente, conta somente com um chicote, 4 pontos de vida, 4
-bombas e 4 cordas para ajudá-lo a se defender e se locomover pela caverna.
-Contudo, diversos equipamentos, acessórios e armas podem ser obtidos e
-utilizados ao longo do jogo. Além disso, o jogador pode interagir com objetos do
-ambiente, como pedras, vasos, baús de tesouro, entre outros. Também se
-encontram, espalhados pelas cavernas, os \textbf{Comerciantes}. Estes
-\textit{NPCs}\footnote{\textit{Non-Playable Characters}(Personagens
-Não-Jogáveis). São personagens que não são controlados pelo jogador. Geralmente
-interagem de alguma maneira com o personagem do jogador.} comercializam itens
-com o jogador em troca de tesouros. É possível, inclusive, tentar furtar itens
-destes comerciantes. Contudo, se o jogador o fizer, todos os comerciantes
-ficarão extremamente irritados e passarão a caçar o explorador com espingardas.
+O jogador, inicialmente, conta somente com os seguintes recursos: um chicote, 4
+pontos de vida, 4 bombas e 4 cordas. Contudo, pode obter e utilizar diversos
+equipamentos, acessórios e armas ao longo do jogo. Além disso, o jogador pode
+interagir com objetos do ambiente, como pedras, vasos, baús de tesouro, entre
+outros. Também se encontram, espalhados pelas cavernas, os
+\textbf{Comerciantes}. Estes \textit{NPCs}\footnote{\textit{Non-Player
+Characters} (Personagens Não-Jogáveis). São personagens que não são controlados
+pelo jogador. Geralmente interagem de alguma maneira com o personagem do
+jogador.} comercializam itens com o jogador em troca de tesouros. É possível,
+inclusive, tentar furtar itens destes comerciantes. Contudo, se o jogador o
+fizer, todos os comerciantes ficarão extremamente irritados e passarão a caçar
+o explorador com espingardas.
 
 O jogo foi desenvolvido por Derek Yu - utilizando o motor de desenvolvimento de
-jogos \textit{GameMaker} (Versão 8.0 Pro) - e lançado gratuitamente para a plataforma
-\textit{Windows} em dezembro de 2008\cite{SPELUNKYRELEASE}. No fim de 2009, o
-criador optou por liberar o código fonte do jogo, permitindo sua distribuição
-não-comercial e modificação\cite{SPELUNKYLICENSE}.
-
-A liberação do código fonte de Spelunky pode ser considerada um marco muito
-importante, pois permitiu que fossem criadas modificações para o jogo. Estas
-modificações, que podem ser encontradas no fórum oficial da \textit{Mossmouth}
--- empresa desenvolvedora de jogos criada por Derek Yu -- \cite{SPELUNKYFORUM},
-são correções de \textit{bugs}, mapas customizados ou até mesmo modos de jogo
+jogos \textit{GameMaker} (Versão 8.0 Pro) - e lançado gratuitamente para a
+plataforma \textit{Windows} em dezembro de 2008\cite{SPELUNKYRELEASE}. No fim de
+2009, o criador optou por liberar o código fonte do jogo, permitindo sua
+distribuição não-comercial e modificação\cite{SPELUNKYLICENSE}. A liberação do
+código fonte de Spelunky pode ser considerada um marco muito importante, pois
+permitiu que fossem criadas modificações para o jogo. Estas modificações, que
+podem ser encontradas no fórum oficial da \textit{Mossmouth} -- empresa
+desenvolvedora de jogos criada por Derek Yu -- \cite{SPELUNKYFORUM}, são
+correções de \textit{bugs}, mapas customizados ou até mesmo modos de jogo
 completamente diferentes do jogo original. Pode-se dizer que dar esta liberdade
 para a comunidade do jogo é uma das coisas que ajuda a manter sua base de
 jogadores e atraem novos até hoje.
@@ -66,8 +65,8 @@ desenvolvido para o controle dos comportamentos dos elementos do jogo.} e de
 \textit{sprites}\footnote{Elementos visuais do jogo, tais como o personagem, o
 fundo, os inimigos. Representados como uma ou mais imagens, permitindo que as
 mesmas sejam animadas.}, gerenciadores de eventos, entre outras
-\cite{GMAKER8DOCS}, o GameMaker oferece um ótimo suporte ao desenvolvedor para
-a criação de jogos. O motor disponibiliza uma linguagem de programação própria
+\cite{GMAKER8DOCS}, o GameMaker oferece um ótimo suporte ao desenvolvedor para a
+criação de jogos. O motor disponibiliza uma linguagem de programação própria
 para seus \textit{scripts}, a \textit{GameMaker Language \(GML\)}.
 
 \begin{figure}[htb!]
@@ -77,7 +76,7 @@ elementos do jogo como o jogador, a caverna, os inimigos, os tesouros, entre
 outros.} \end{figure}
 
 
-
+%----------
 \section{Plataformas de Testes para Inteligência Artificial}
 Existe uma relação mutualmente benéfica entre a área de inteligência artificial
 e jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
@@ -85,29 +84,28 @@ técnicas e algoritmos de inteligência artificial com o intuito de enriquecer
 seu conteúdo. O jogo \textbf{Black \& White} da desenvolvedora \textit{Lionhead
 Studios}, por exemplo, incorporou as técnicas de agentes BDI, árvores de
 decisão e redes neurais para ditar o comportamento de alguns seus personagens
-\cite{TOPAIGAMES}. Já o jogo \textbf{F.E.A.R}, da desenvolvedora
+\cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da desenvolvedora
 \textit{Monolith Productions}, utilizou os conceitos de planejamento para
 aumentar o realismo das decisões tomadas por seus agentes.\cite{FEARPLANNING}.
 
 Do outro lado, o campo da inteligência artificial se beneficia ao utilizar os
 jogos como plataformas de teste para suas técnicas e algoritmos. Jogos digitais
-são capazes de capturar a complexidade de situações do mundo real e, ao mesmo
-tempo, manterem-se relativamente simples e baratos. Podem replicar inúmeras
-situações e ambientes -- existem diversos gêneros de jogos, variando desde
-jogos educacionais até jogos de tiro em primeira pessoa -- e até mesmo criar
-cenários impossíveis ou impraticáveis no mundo real. Ademais, possuem a
-vantagem de serem programas de computador, o que significa que, por muitas
-vezes, podem acelerar a velocidade na qual testes são executados, ou ainda
-executar múltiplos testes em paralelo. A natureza lúdica dos jogos também são
-um ponto importante a ser ressaltado, pois ajudam a motivar os pesquisadores,
-além de resultar na adesão de outros. Estas são algumas das características dos
-jogos digitais que fazem com que sejam atraentes para pesquisadores da área de
-inteligência artificial.
+capturam a complexidade de situações do mundo real e, ao mesmo tempo, são
+relativamente simples e baratos. Podem replicar inúmeras situações e ambientes
+-- existem diversos gêneros de jogos, variando desde jogos educacionais até
+jogos de tiro em primeira pessoa -- e até mesmo criar cenários impossíveis ou
+impraticáveis no mundo real. Ademais, possuem a vantagem de serem programas de
+computador, o que significa que, por muitas vezes, podem acelerar a velocidade
+na qual testes são executados, ou ainda executar múltiplos testes em paralelo.
+A natureza lúdica dos jogos também são um ponto importante a ser ressaltado,
+pois ajudam a motivar os pesquisadores, além de resultar na adesão de outros.
+Estas são algumas das características dos jogos digitais que fazem com que
+sejam atraentes para pesquisadores da área de inteligência artificial.
 
-Tendo este apanhado de informações em mente, pesquisadores e entusiastas da
-área acabam desenvolvendo \textit{frameworks} de inteligência artificial em
-cima de jogos existentes para servir de plataforma de teste. Um exemplo disso
-seria o \textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para o jogo
+Tendo este apanhado de informações em mente, pesquisadores e entusiastas da área
+acabam desenvolvendo \textit{frameworks} de inteligência artificial em cima de
+jogos existentes para servir de plataforma de teste. Um exemplo disso é o
+\textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para o jogo
 \textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
 especificamente para isso, como foi o caso do projeto \textbf{TORCS, The Open
 Racing Car Simulator}, um simulador de corridas de carro que permite que
@@ -116,22 +114,22 @@ desenvolvedores programem a inteligência de carros e compitam entre sí
 
 \subsection{Competições de Inteligência Artificial em Jogos Digitais}
 Muitas vezes, os \textit{frameworks} de inteligência artificial desenvolvidos
-dão origem a competições, servindo como base comum para o desenvolvimento e
-aplicação de técnicas de inteligência artificial para os concorrentes. Nestas
-disputas, os competidores são encorajados a resolver problemas ou sub-problemas
-impostos pelo jogo em questão, sendo vencedores os candidatos que melhor
-resolvê-los.
+abrem espaço para a criação de competições, servindo como base comum para o
+desenvolvimento e aplicação de técnicas de inteligência artificial para os
+concorrentes. Nestas disputas, os competidores são encorajados a resolver
+problemas ou sub-problemas impostos pelo jogo em questão, sendo vencedores os
+candidatos que melhor resolvê-los.
 
 Geralmente, o problema proposto é o de jogar o jogo de maneira mais eficiente.
 Para realizar uma avalição objetiva, são utilizadas métricas estipuladas pelo
 próprio jogo, como pontuação ou tempo. Muitas vezes, os organizadores da
 competição optam por fazer uso de um sistema de \textit{ranking}, expondo os
-resultados obtidos pelos candidatos. A competição \textbf{The General Video
-Game AI Competition}, que explora o problema de criar controladores genéricos
-de jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Às vezes, as competições
-fazem com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso
-seria a competição que gira em torno de \textbf{Vindinium}, um jogo para a
-plataforma \textit{web} \cite{VINDINIUMWEB}.
+resultados obtidos pelos candidatos. A competição \textbf{The General Video Game
+AI Competition}, que explora o problema de criar controladores genéricos de
+jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Às vezes, as competições fazem
+com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso seria a
+competição que gira em torno de \textbf{Vindinium}, um jogo para a plataforma
+\textit{web} \cite{VINDINIUMWEB}.
 
 Contudo, a proposta principal da disputa pode ser outra. A competição
 \textbf{Mario AI Competition}, por exemplo, possuia como uma de suas metas a
@@ -158,26 +156,29 @@ design}, aprendizado de máquina, entre outras. Algumas competições costumam
 oferecer prêmios em dinheiro para os melhores colocados, como forma de
 incentivo.
 
+
+%----------
 \section{SpelunkBots}
 Utilizando o código-fonte de Spelunky, Daniel Scales e Thomas Thompson, da
 Universidade de Derby, criaram \textit{SpelunkBots} \cite{SPELUNKBOTSWEB}, um
 \textit{framework} que permite a programação de \textit{bots} para o jogo
 Spelunky. Um dos objetivos dos criadores é utilizar a aplicação para criar uma
-competição de inteligência artificial para o jogo. A aplicação se comunica com o
-código-fonte original e permite a utilização das linguagens \textit{GML} (padrão
-do GameMaker) e \textit{C++} para a descrição do comportamento de \textit{bots}.
+competição de inteligência artificial para o jogo. A aplicação se comunica com
+o código-fonte original e permite a utilização das linguagens \textit{GML}
+(padrão do GameMaker) e \textit{C++} para a descrição do comportamento de
+\textit{bots}.
 
-A \textit{API} permite que o desenvolvedor resgate informações de objetos
+A \textit{API} possibilita que o desenvolvedor resgate informações de objetos
 estáticos e dinâmicos contidos no ambiente do jogo, como o terreno do jogo ou a
 posição de tesouros, armadilhas e inimigos. Contudo, o objetivo da \textit{API}
 disponibilizada por SpelunkBots é fazer com que a informação recebida pelo
 \textit{bot} se assemelhe ao máximo com a percepção de um jogador humano.  Para
-tal, o \textit{framework} instaurou um sistema de \textit{fog of war}, limitando
-o conhecimento do ambiente que pode ser obtido pela inteligência artificial.
-Para objetos estáticos, uma vez que o jogador visualizou o objeto ele poderá
-receber informações sobre ele permanentemente. Para objetos dinâmicos, o
-\textit{bot} só poderá receber informações sobre eles se os mesmos estiverem
-sendo visualizados pelo jogador.
+tal, o \textit{framework} instaurou um sistema de \textit{fog of war},
+limitando o conhecimento do ambiente que pode ser obtido pela inteligência
+artificial.  Para objetos estáticos, uma vez que o jogador visualizou o objeto
+ele poderá receber informações sobre ele permanentemente. Para objetos
+dinâmicos, o \textit{bot} só poderá receber informações sobre eles se os mesmos
+estiverem sendo visualizados pelo jogador.
 
 Para permitir que o \textit{bot} execute ações, o desenvolvedor pode enviar
 comandos através da simulação de aperto de botões. Os comandos são enviados após
@@ -188,20 +189,22 @@ possúi um \textit{jetpack} equipado fará com que o mesmo salte mais alto. Tend
 isto em mente, a \textit{API} permite que o desenvolvedor saiba quais itens o
 jogador possúi atualmente.
 
-O \textit{framework} também disponibiliza algumas ferramentas para suporte ao
-desenvolvedor. Uma delas é a capacidade de receber informações sobre o estado do
-\textit{bot}, sua trajetória ou o ambiente na tela do jogo enquanto o programa
-está executando. Outra ferramenta muito valiosa é um editor de níveis. Isto faz
-com que o desenvolvedor não precise esperar que um cenário específico ocorra no
-jogo para testar uma capacidade específica do \textit{bot}. Além disso, o jogo
-foi modificado para permitir que o jogador pegue atalhos e pule para qualquer
-nível ou área do jogo, caso queira testar as capacidades de seu \textit{bot} em
-níveis mais difíceis sem ter que jogar o jogo desde o início. Outra
-funcionalidade muito útil é a habilidade de mudar a velocidade do jogo enquanto
-joga. Isto facilitaria a implementação de uma abordagem focada em aprendizado de
-máquina, tendo em vista que aceleraria o processo de aprendizado. Os criadores
-também disponibilizam alguns \textit{bots} e níveis básicos para ajudar novos
-desenvolvedores a entender sua \textit{API}.
+O jogo original foi modificado para possibilitar que o jogador crie níveis
+customizados e pule para qualquer nível ou área do jogo, caso queira testar as
+capacidades de seu \textit{bot} em cenários específicos ou mais difíceis sem
+ter que jogar o jogo desde o início. O SpelunkBots também conta com uma opção
+de acelerar ou desacelerar a partida. Isto facilitaria a implementação de uma
+abordagem focada em aprendizado de máquina, pois aceleraria o processo de
+aprendizado.
+
+O \textit{framework} oferece ao desenvolvedor a capacidade de visualizar
+informações importantes -- como, por exemplo, o estado do \textit{bot}, sua
+trajetória e o ambiente -- diretamente na tela do jogo, enquanto o programa
+está em execução.
+
+Os criadores disponibilizam alguns \textit{bots} e níveis básicos para
+exemplificar a utilização da \textit{API}, fornecendo, assim, uma base inicial
+aos competidores.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunkbots-debug-screen.png}
@@ -210,8 +213,7 @@ algumas das informações de \textit{debug} disponíveis durante a execução do
 programa SpelunkBots.} \end{figure}
 
 
-
-
+%----------
 \section{Agentes Racionais}
 Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz
 de perceber o ambiente onde está situado, através de seus sensores, podendo
@@ -219,7 +221,7 @@ executar ações nesse ambiente conforme sua necessidade através de seus
 atuadores.\cite{Russell:1995:AIM:193191} Para exemplificar, podemos tomar como
 exemplo o ser humano, que consegue perceber o ambiente através de seus olhos e
 ouvidos, conseguindo agir no ambiente com suas partes do corpo, como braços,
-pernas, mãos e etc.\cite{Russell:1995:AIM:193191}
+pernas, mãos, etc \cite{Russell:1995:AIM:193191}.
 
 Portanto, podemos generalizar o conceito de agente racional como todo e
 qualquer tipo de agente que, no ambiente em que está inserido, toma ações que o
@@ -229,22 +231,22 @@ comprometido.
 \textbf{Agentes reflexivos} são agentes que executam ações baseados em alguma
 situação percebida. Por exemplo, podemos ter um agente reflexivo que poderá
 fazer uma postagem em uma rede social, dado que uma outra pessoa fez uma
-postagem. Tal tipo de agente não ``pensará'' sobre a ação que está executando,
-simplesmente a executará baseado no que percebeu anteriormente. Estes agentes
-têm como principal característica não guardarem tipo algum de informação das
-suas experiências passadas, sendo apenas reativos.
+postagem. Este tipo de agente não ``pensa'' sobre a ação que está executando,
+simplesmente a executa baseado no que percebeu anteriormente. Estes agentes têm
+como principal característica não guardarem tipo algum de informação das suas
+experiências passadas, sendo apenas reativos.
 
 Diferentemente dos agentes reflexivos, \textbf{agentes com memória} são capazes
 de guardar informações sobre as experiências passadas, podendo fazer o uso das
-mesmas para alcançar seus objetivos. A lembrança das experiência passadas
-possibilita à um agente uma forma de aprender e melhorar, fazendo com que, por
-exemplo, sejam evitadas ações não efetivas ou que seja escolhida, entre um
-conjunto de possíveis ações, a que seja a mais efetiva para o agente.
+mesmas para alcançar seus objetivos. A lembrança das experiências passadas
+fornece ao agente uma oportunidade de aprender, fazendo com que o mesmo evite
+ações não efetivas ou que escolha, entre um conjunto de possíveis ações, a que
+seja a mais efetiva.
 
-Além de ter memória, é necessário que um agente saiba quando o mesmo obteve
-sucesso no que se propôs a fazer. Com isso, \textbf{agentes baseados em
-objetivos} conseguem tomar suas decisões - ações a executar - com base na ação
-que os deixa mais próximos de alcançarem seus objetivos. O desafio desse tipo de
+Além de ter memória, é necessário que um agente saiba quando obteve sucesso no
+que se propôs a fazer. Com isso, \textbf{agentes baseados em objetivos}
+conseguem tomar suas decisões - ações a executar - com base na ação que os
+deixa mais próximos de alcançarem seus objetivos. O desafio desse tipo de
 agente é saber como alcançar esse objetivo, podendo ser usadas técnicas de
 busca e planejamento para determinar as possíveis ações a serem executadas para
 alcançá-lo.
@@ -259,10 +261,10 @@ de medir os resultados de suas ações, escolhendo as que, além de alcançar se
 objetivo, façam o mesmo da melhor maneira possível.
 
 \subsection{Ambiente}
-Todas as ações que um agente pode executar, bem como suas percepções, ocorrem no
-ambiente onde o agente está inserido. Porém, existem diferentes tipos de
-ambientes, que, dependendo de sua característica, podem dificultar o trabalho de
-um determinado agente.
+Todas as ações que um agente pode executar, bem como suas percepções, ocorrem
+no ambiente onde o agente está inserido. Porém, existem diferentes tipos de
+ambientes, que, dependendo de sua característica, podem dificultar o trabalho
+de um determinado agente.
 
 Primeiramente, os ambientes podem ser \textbf{acessíveis} ou
 \textbf{inacessíveis} (também chamados de \textbf{observáveis} ou \textbf{não
@@ -284,101 +286,78 @@ anteriories, fazendo o uso desta nos episódios subsequentes, gravando outras
 informações sobre tais episódios caso necessário.
 
 Caso um ambiente possa sofrer mudanças sem ações do agente, será um ambiente
-\textbf{dinâmico}, caso contrário, chamamos esse tipo de ambiente de
-\textbf{estático}. Caso o ambiente não mude de acordo com o tempo, porém, o
-agente mude sua forma de agir (melhorando sua atuação, por exemplo), chamamos
-o ambiente de \textbf{semidinâmico}.
+\textbf{dinâmico}. Caso contrário, chamamos esse tipo de ambiente de
+\textbf{estático}. Se o ambiente não muda de acordo com o tempo mas o agente
+muda sua maneira de agir (melhorando sua atuação, por exemplo), chamamos o
+ambiente de \textbf{semidinâmico}.
 
 Por fim, classificamos os ambientes como \textbf{discretos} ou
 \textbf{contínuos}, sendo ambientes discretos aqueles onde temos um número
 finito de possíveis estados.
 
-Dados os seguintes tipos:
+%Dados os seguintes tipos:
 
-\begin{enumerate}
-    \item Acessível
-    \item Determinístico
-    \item Episódico
-    \item Estático
-    \item Discreto
-\end{enumerate}
+%\begin{enumerate} \item Acessível \item Determinístico \item Episódico \item
+%Estático \item Discreto \end{enumerate}
 
-Podemos exemplificar os tipos de ambientes através da
-tabela~\ref{tab:ENVEXAMPLETABLE}:
+%Podemos exemplificar os tipos de ambientes através da
+%tabela~\ref{tab:ENVEXAMPLETABLE}:
 
-\begin{table}[htb]
-    \begin{center}
-        \caption{\label{tab:ENVEXAMPLETABLE} Tabela exemplificando os
-        diferentes tipos de ambientes}
-        \begin{tabular}{| l | c | c | c | c | c |} \hline
-            \textbf{Tipo de Ambiente}         & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\ \hline
-            Partida de xadrez sem relógio     & Sim        & Sim        & Não        & Não        & Não        \\ \hline
-            Corrida de táxi                   & Não        & Não        & Não        & Não        & Não        \\ \hline
-            Partida de poker                  & Não        & Não        & Não        & Sim        & Sim        \\ \hline
-            Sistema para diagnósticos médicos & Não        & Não        & Não        & Não        & Não        \\ \hline
-            Sistema para análise de imagens   & Sim        & Sim        & Sim        & Semi       & Não        \\ \hline
-        \end{tabular}
-    \end{center}
-\end{table}
+%\begin{table}[htb] \begin{center} \caption{\label{tab:ENVEXAMPLETABLE} Tabela
+%exemplificando os diferentes tipos de ambientes} \begin{tabular}{| l | c | c | c
+%| c | c |} \hline \textbf{Tipo de Ambiente}         & \textbf{1} & \textbf{2} &
+%\textbf{3} & \textbf{4} & \textbf{5} \\ \hline Partida de xadrez sem relógio
+%& Sim        & Sim        & Não        & Não        & Não        \\ \hline
+%Corrida de táxi                   & Não        & Não        & Não        & Não
+%& Não        \\ \hline Partida de poker                  & Não        & Não
+%& Não        & Sim        & Sim        \\ \hline Sistema para diagnósticos
+%médicos & Não        & Não        & Não        & Não        & Não        \\
+%\hline Sistema para análise de imagens   & Sim        & Sim        & Sim
+%& Semi       & Não        \\ \hline \end{tabular} \end{center} \end{table}
 
 \subsection{Agentes BDI}
-O estudo de agentes racionais faz com que seja necessário, além de entender os
-aspectos e característica dos mesmos, entender como é possível realizar a
+O estudo de agentes racionais faz com que seja necessário, além de compreender
+seus aspectos e características, entender como é possível realizar a
 implementação desse tipo de agente. A aplicação de técnicas convencionais para
-o desenvolvimento desses agentes mostrou-se despendiosa e difícil de ser feita,
-verificada e mantida \cite{BDIFROMTHEORYTOPRACTICE}, sendo então necessária o
-uso de outras técnicas para a implementação dos mesmos.
+o desenvolvimento desses agentes é despendiosa e difícil de ser feita,
+verificada e mantida \cite{BDIFROMTHEORYTOPRACTICE}, sendo então necessário o
+uso de outras técnicas para sua implementação.
 
 Nesse contexto, surge a arquitetura de agentes BDI (\textit{Belief, Desire,
 Intentions}), capaz de modelar agentes racionais de uma maneira mais adequada.
 Tal arquitetura conta com alguns conceitos que permitem modelar agentes
 racionais, explicados a seguir:
 
-\begin{description}
-    \item [Crenças (\textit{Beliefs})]
-        Trata-se de tudo aquilo que o agente acredita saber sobre o ambiente,
-        é chamado de ``crença'' pois tal informação pode vir a não ser verdade.
-        As crenças podem vir a ser atualizadas a cada nova percepção do ambiente
-        feita pelo agente, sendo armazenadas na memória do agente.
-    \item [Desejos (\textit{Desires})]
-        Além de uma base de crenças, é necessário que um agente saiba o que deve
-        ser feito para alcançar os seus objetivos. Tais ações são chamadas de
-        desejos, e, além de representar o que um agente deseja fazer, também
-        representam os custos associados com a busca por esse desejo.
-    \item [Intenções (\textit{Intentions})]
-        Diferentemente dos desejos, uma intenção é algo com o qual o agente se
-        compromete a fazer em busca dos seus objetivos, dessa forma, podemos ver
-        as intenções como as ações que efetivamente serão executadas para
-        alcançar os objetivos.
-\end{description}
+\begin{description} \item [Crenças (\textit{Beliefs})] Trata-se de tudo aquilo
+que o agente acredita saber sobre o ambiente, é chamado de ``crença'' pois tal
+informação pode vir a não ser verdade.  As crenças podem vir a ser atualizadas a
+cada nova percepção do ambiente feita pelo agente, sendo armazenadas na memória
+do agente.  \item [Desejos (\textit{Desires})] Além de uma base de crenças, é
+	necessário que um agente saiba o que deve ser feito para alcançar os seus
+	objetivos. Tais ações são chamadas de desejos, e, além de representar o que
+	um agente deseja fazer, também representam os custos associados com a busca
+	por esse desejo.  \item [Intenções (\textit{Intentions})] Diferentemente dos
+	desejos, uma intenção é algo com o qual o agente se compromete a fazer em
+	busca dos seus objetivos, dessa forma, podemos ver as intenções como as
+	ações que efetivamente serão executadas para alcançar os objetivos.
+	\end{description}
 
-Com estes três conceitos, é possível definir um algoritmo interpretador
-BDI. O algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso desses
-conceitos \cite{BDIFROMTHEORYTOPRACTICE}.
+Com estes três conceitos, é possível definir um algoritmo interpretador BDI. O
+algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso desses conceitos
+\cite{BDIFROMTHEORYTOPRACTICE}.
 
-\begin{algorithm}[htb]
-\begin{center}
-    % Um exemplo de algoritmo utilizando a pacote 'algorithmic'
-    %\algsetup{linenosize=\small,linenodelimiter=.}
-    \begin{algorithmic}[1]
-        \STATE inicializar();
-        \STATE
-        \WHILE {true}
-            \STATE opções $\gets$ gerar-opções(fila-de-eventos);
-            \STATE opções-escolhidas $\gets$ deliberar(opções);
-            \STATE atualizar-intenções(opções-escolhidas);
-            \STATE executar();
-            \STATE buscar-novos-eventos-externos();
-            \STATE esquecer-atitutes-de-sucesso();
-            \STATE esquecer-atitudes-impossíveis();
-        \ENDWHILE
-    \end{algorithmic}
-\end{center}
-\caption[Algoritmo para representar um interpretador BDI.]
-    {\label{alg:BDIINTERPRETERALG}
-        Algoritmo para representar um interpretador BDI, utilizando os conceitos
-        de crenças, desejos e intenções para a sua implementação.}
-\end{algorithm}
+\begin{algorithm}[htb] \begin{center}
+	% Um exemplo de algoritmo utilizando a pacote 'algorithmic'
+	%\algsetup{linenosize=\small,linenodelimiter=.}
+	\begin{algorithmic}[1] \STATE inicializar(); \STATE \WHILE {true} \STATE
+	opções $\gets$ gerar-opções(fila-de-eventos); \STATE opções-escolhidas
+	$\gets$ deliberar(opções); \STATE atualizar-intenções(opções-escolhidas);
+	\STATE executar(); \STATE buscar-novos-eventos-externos(); \STATE
+	esquecer-atitutes-de-sucesso(); \STATE esquecer-atitudes-impossíveis();
+	\ENDWHILE \end{algorithmic} \end{center} \caption[Algoritmo para representar
+	um interpretador BDI.] {\label{alg:BDIINTERPRETERALG} Algoritmo para
+	representar um interpretador BDI, utilizando os conceitos de crenças,
+	desejos e intenções para a sua implementação.} \end{algorithm}
 
 As possíveis opções são escolhidas a cada novo ciclo, sendo sempre buscadas de
 uma fila de eventos ocorridos, após, é escolhida uma opção a ser seguida,
@@ -407,39 +386,34 @@ mesmo.
 Tomemos como exemplo um agente em um ambiente estocástico - onde não se consegue
 ter certeza sobre o resultado da execução de uma ação - e não observável, como
 não temos certeza sobre o estado do ambiente, nem sobre o resultado de nossas
-ações, precisamos estabelecer um plano onde podemos tratar as dificuldades que
-o ambiente nos impõe.
+ações, precisamos estabelecer um plano onde podemos tratar as dificuldades que o
+ambiente nos impõe.
 
 Portanto, podemos definir um sistema planejador como um sistema que tem como
-saída um plano a ser executado e como entrada os seguintes componentes:
+saída um plano a ser executado e como entrada os seguintes componentes
+\cite{Woolridge:2001:IMS:559667}:
 
-\begin{description}
-    \item [Objetivos]
-        Também chamados de intenções ou tarefas, é algo que o agente deseja
-        obter, manter ou evitar.
-    \item [Crenças]
-        Tudo o que um agente sabe sobre o estado do ambiente.
-    \item [Ações]
-        Tudo o que um agente pode executar no ambiente onde está inserido.
-\end{description}\cite{Woolridge:2001:IMS:559667}
-
+\begin{description} \item [Objetivos] Também chamados de intenções ou tarefas, é
+algo que o agente deseja obter, manter ou evitar.  \item [Crenças] Tudo o que um
+agente sabe sobre o estado do ambiente.  \item [Ações] Tudo o que um agente pode
+executar no ambiente onde está inserido.
+\end{description}
 A ideia principal para a construção de um sistema planejador se dá através da
 extensão da representação de crenças, objetivos e ações com o uso de algum tipo
 de linguagem formal (normalmente lógica de primeira ordem, ou algum subconjunto
-da mesma). Isso permite que o planejador possa fazer uma ligação direta entre
-as ações e os estados, podendo, portanto, considerar apenas ações relevantes
-para o plano. \cite{Russell:1995:AIM:193191} As ações passam a ter
-pré-condições e efeitos, que faz com que o agente, antes de executar uma ação,
-tenha que ter um conhecimento prévio do ambiente. Assim, após a execução da
-mesma, seus efeitos fazem com que seja alterado o conhecimento sobre o
-ambiente.
+da mesma). Isso permite que o planejador possa fazer uma ligação direta entre as
+ações e os estados, podendo, portanto, considerar apenas ações relevantes para o
+plano \cite{Russell:1995:AIM:193191}. As ações passam a ter pré-condições e
+efeitos, que faz com que o agente, antes de executar uma ação, tenha que ter um
+conhecimento prévio do ambiente. Assim, após a execução da mesma, seus efeitos
+fazem com que seja alterado o conhecimento sobre o ambiente.
 
 O uso de uma linguagem formal nessa tarefa permite que os componentes de um
 planejador sejam expressos de uma maneira onde seja possível fazer operarações
 sobre tais conjecturas, facilitando o processo de geração de um plano.
 
-Um dos primeiros planejadores a surgir foi o STRIPS \cite{STRIPSNEWAPPROACH},
-em $1971,$ sendo utilizado como referência para a solução de muitos problemas de
+Um dos primeiros planejadores a surgir foi o STRIPS \cite{STRIPSNEWAPPROACH}, em
+$1971,$ sendo utilizado como referência para a solução de muitos problemas de
 planejamento até hoje.
 
 \section{Aprendizado de Máquina}
