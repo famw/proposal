@@ -1,4 +1,29 @@
 \chapter{\label{chap:problem}O Problema}
+Estabelecer a complexidade computacional de jogos -- sejam jogos de carta, jogos
+de tabuleiro ou jogos digitais -- é uma prática muito importante e comum.
+Através desta categorização, obtemos evidências do porquê humanos consideram
+estes problemas como sendo interessantes, além de indicar para pesquisadores da
+área os desafios propostos vistos de uma perspectiva de tarefa de otimização.
+Dados os desafios presentes em Spelunky concluiu-se que, computacionalmente
+falando, trata-se de, no mínimo, um problema do conjunto \textit{NP-Hard}
+\cite{SPELUNKYHARD}.
+
+O ambiente em Spelunky é \textbf{contínuo}, \textbf{parcialmente observável},
+\textbf{dinâmico}, \textbf{estocástico} e \textbf{sequencial}. Estas
+características influenciam fortemente na dificuldade do problema proposto pelo
+jogo. Somado a isto, os níveis são gerados proceduralmente, cortando a
+possibilidade de memorização do mapa. Contudo, o algoritmo utilizado para gerar
+os níveis garante que existe pelo menos um caminho transponível do início ao fim
+-- mesmo que com inimigos e armadilhas no caminho --, sem que seja necessário o
+uso de bombas ou cordas para ajudar com desobstrução e locomoção. Alguns
+exemplos de geração de mapa podem ser observados a seguir:
+
+\begin{figure}[htb!]
+\centering\includegraphics[width=.65\textwidth]{fig/spelunky-levels-example.png}
+\caption {\label{fig:spelunkbots-debug-screen}Exemplos de níveis gerados
+proceduralmente.} \end{figure}
+
+% diversas acoes e combinacoes de acoes possiveis
 
 \begin{itemize}
     \item Construção de um bot capaz de jogar uma partida de Spelunky
