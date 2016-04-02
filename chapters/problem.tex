@@ -15,22 +15,34 @@ jogo. Somado a isto, os níveis são gerados proceduralmente, cortando a
 possibilidade de memorização do mapa. Contudo, o algoritmo utilizado para gerar
 os níveis garante que existe pelo menos um caminho transponível do início ao fim
 -- mesmo que com inimigos e armadilhas no caminho --, sem que seja necessário o
-uso de bombas ou cordas para ajudar com desobstrução e locomoção. Alguns
-exemplos de geração de mapa podem ser observados a seguir:
+uso de bombas ou cordas para ajudar com desobstrução e locomoção. O personagem
+tipicamente entra no nível pela parte superior e deve encontrar a saída que se
+encontra na parte inferior do mapa. Um exemplo de geração de mapa pode ser
+observado a seguir:
 
 \begin{figure}[htb!]
-\centering\includegraphics[width=.65\textwidth]{fig/spelunky-levels-example.png}
-\caption {\label{fig:spelunkbots-debug-screen}Exemplos de níveis gerados
+\centering\includegraphics[width=.65\textwidth]{fig/spelunky-level-example.png}
+\caption {\label{fig:spelunky-level-example}Exemplos de níveis gerados
 proceduralmente.} \end{figure}
 
-% diversas acoes e combinacoes de acoes possiveis
+Outro agravante é o número de ações -- e combinações de ações -- que podem ser
+executadas pelo jogador a cada atualização do jogo. Algumas delas são
+influenciadas por itens equipados ou estado atual do jogador, o que significa
+que, caso não se tenha o devido cuidado, podem gerar resultados insesperados,
+resultando na perda de vida ou até mesmo no fim do jogo.
 
-\begin{itemize}
-    \item Construção de um bot capaz de jogar uma partida de Spelunky
-    \item Explicar e detalhar o ambiente onde o jogador estará inserido
-    \item Explicar como o jogador pode interagir com o ambiente
-    \item Enumerar as possíveis ações do jogador
-    \item Explicar os cenários onde o jogador pode perder vidas
-    \item Explicar como o bot pode ``ver'' o ambiente
-    \item Detalhar a API do Spelunkbots
-\end{itemize}
+Os pontos de vida são o recurso mais importante do explorador pois, quando
+esgotados, encerra-se a partida. Existem inúmeras maneiras de se perder este
+recurso em Spelunky, como inimigos, armadilhas ou até mesmo uma queda de um
+lugar muito alto.
+
+Este trabalho visa a criação de um \textit{bot} que seja capaz de jogar uma
+partida de Spelunky da melhor maneira possível. As métricas de avaliação
+utilizadas serão pontuação e tempo. Para auxiliar nesta tarefa, utilizar-se-á o
+\textit{framework} SpelunkBots. Esta ferramenta se comunica diretamente com o
+jogo, possibilitando a aquisição de informações do ambiente -- como localização
+de inimigos, armadilhas e tesouros --, o envio de ações para o explorador, entre
+outras facilidades -- algumas mencionadas anteriormente. Após estudo mais
+aprofundado das técnicas de inteligência artifical citadas neste documento,
+selecionaremos as que mais se adequarem para a resolução do problema proposto
+para incorporar durante o desenvolvimento do projeto.
