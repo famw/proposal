@@ -295,26 +295,6 @@ Por fim, classificamos os ambientes como \textbf{discretos} ou
 \textbf{contínuos}, sendo ambientes discretos aqueles onde temos um número
 finito de possíveis estados.
 
-%Dados os seguintes tipos:
-
-%\begin{enumerate} \item Acessível \item Determinístico \item Episódico \item
-%Estático \item Discreto \end{enumerate}
-
-%Podemos exemplificar os tipos de ambientes através da
-%tabela~\ref{tab:ENVEXAMPLETABLE}:
-
-%\begin{table}[htb] \begin{center} \caption{\label{tab:ENVEXAMPLETABLE} Tabela
-%exemplificando os diferentes tipos de ambientes} \begin{tabular}{| l | c | c | c
-%| c | c |} \hline \textbf{Tipo de Ambiente}         & \textbf{1} & \textbf{2} &
-%\textbf{3} & \textbf{4} & \textbf{5} \\ \hline Partida de xadrez sem relógio
-%& Sim        & Sim        & Não        & Não        & Não        \\ \hline
-%Corrida de táxi                   & Não        & Não        & Não        & Não
-%& Não        \\ \hline Partida de poker                  & Não        & Não
-%& Não        & Sim        & Sim        \\ \hline Sistema para diagnósticos
-%médicos & Não        & Não        & Não        & Não        & Não        \\
-%\hline Sistema para análise de imagens   & Sim        & Sim        & Sim
-%& Semi       & Não        \\ \hline \end{tabular} \end{center} \end{table}
-
 \subsection{Agentes BDI}
 O estudo de agentes racionais faz com que seja necessário, além de compreender
 seus aspectos e características, entender como é possível realizar a
@@ -328,23 +308,29 @@ Desire, Intentions}), capaz de modelar agentes racionais de uma maneira mais
 adequada. Tal arquitetura conta com alguns conceitos que permitem modelar
 agentes racionais, explicados a seguir:
 
-\begin{description} \item [Crenças (\textit{Beliefs})] Tudo aquilo
-que o agente acredita saber sobre o ambiente, é chamado de ``crença'' pois tal
-informação pode vir a não ser verdade.  As crenças podem vir a ser atualizadas a
-cada nova percepção do ambiente feita pelo agente, sendo armazenadas na memória
-do agente.  \item [Desejos (\textit{Desires})] Além de uma base de crenças, é
-	necessário que um agente saiba o que deve ser feito para alcançar os seus
-	objetivos. Tais ações são chamadas de desejos, e, além de representar o que
-	um agente deseja fazer, também representam os custos associados com a busca
-	por esse desejo.  \item [Intenções (\textit{Intentions})] Diferentemente dos
-	desejos, uma intenção é algo com o qual o agente se compromete a fazer em
-	busca dos seus objetivos, dessa forma, podemos ver as intenções como as
-	ações que efetivamente serão executadas para alcançar os objetivos.
-	\end{description}
+\begin{description}
+\item [Crenças (\textit{Beliefs})]
+Tudo aquilo que o agente acredita saber sobre o ambiente é chamado de
+``crença'', pois tal informação pode vir a não ser verdade.  As crenças são
+atualizadas e armazenadas na memória do agente a cada nova percepção do
+ambiente feita por ele.
 
-Com estes três conceitos, é possível definir um algoritmo interpretador BDI. O
-algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso desses conceitos
-\cite{BDIFROMTHEORYTOPRACTICE}.
+\item [Desejos (\textit{Desires})]
+Além de uma base de crenças, é necessário que um agente saiba o que deve ser
+feito para alcançar os seus objetivos. Tais ações são chamadas de desejos e
+representam o que um agente deseja fazer, além de descreverem os custos
+associados com a busca por este desejo.
+
+\item [Intenções (\textit{Intentions})]
+Diferentemente dos desejos, uma intenção é algo com o qual o agente se
+compromete a fazer em busca dos seus objetivos. Dessa forma, podemos ver as
+intenções como as ações que efetivamente serão executadas para alcançar os
+objetivos.
+\end{description}
+
+Com estes três conceitos, é possível definir um algoritmo interpretador de
+agente BDI. O algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso
+desses conceitos \cite{BDIFROMTHEORYTOPRACTICE}.
 
 \begin{algorithm}[htb] \begin{center}
 	% Um exemplo de algoritmo utilizando a pacote 'algorithmic'
@@ -355,21 +341,20 @@ algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso desses conceito
 	\STATE executar(); \STATE buscar-novos-eventos-externos(); \STATE
 	esquecer-atitutes-de-sucesso(); \STATE esquecer-atitudes-impossíveis();
 	\ENDWHILE \end{algorithmic} \end{center} \caption[Algoritmo para representar
-	um interpretador BDI.] {\label{alg:BDIINTERPRETERALG} Algoritmo para
-	representar um interpretador BDI, utilizando os conceitos de crenças,
-	desejos e intenções para a sua implementação.} \end{algorithm}
+	um interpretador de agente BDI.] {\label{alg:BDIINTERPRETERALG} Algoritmo
+	para representar um interpretador de agente BDI, utilizando os conceitos de
+	crenças, desejos e intenções para a sua implementação.} \end{algorithm}
 
 As possíveis opções são escolhidas a cada novo ciclo, sendo sempre buscadas de
-uma fila de eventos ocorridos, após, é escolhida uma opção a ser seguida,
+uma fila de eventos ocorridos. Após, é escolhida uma opção a ser seguida,
 tornando-se então essa opção uma intenção do agente. Caso haja uma intenção a
-ser executada, o agente então a executa. Após, é atualizada a fila de eventos
-com os eventos externos ocorridos. Por fim, o agente esquece os desejos já
-obtidos, bem como as intenções satisfeitas, além de esquecer os desejos e
-intenções impossíveis.
+ser executada, o agente então a executa. A seguir, é atualizada a fila de
+eventos com os eventos externos ocorridos. Por fim, o agente esquece os desejos
+já obtidos, as intenções satisfeitas e os desejos e intenções impossíveis.
 
-Por fim, cabe ressaltar que tal arquitetura possui algumas limitações, bem como
-a incapacidade de fazer com que um agente BDI ``aprenda'' e adapte seu
-comportamento baseado no aprendizado obtido, além de não haver nenhuma
+Cabe ressaltar que tal arquitetura possui algumas limitações, como a
+incapacidade de fazer com que um agente BDI ``aprenda'' e adapte seu
+comportamento baseado no conhecimento obtido, além de não haver nenhuma
 consideração arquitetural sobre a modelagem de sistemas multi-agentes
 \cite{BDIMODELOFAGENCY}, sendo assim necessário explorar outras técnicas caso
 seja necessário que o agente faça uso dessas características.
@@ -377,27 +362,33 @@ seja necessário que o agente faça uso dessas características.
 \section{Planejamento}
 
 A solução para muitos tipos de problemas pode ser expressa através de uma
-sequência de ações a serem executadas - isto é, um plano - principalmente quando
-temos algum tipo de restrição no ambiente. Portanto, em muitos casos, é
-necessário que um agente estabeleça um plano sobre o que deve ser feito para
-resolver o problema o qual foi designado, seguindo as ações que resolvam o
-mesmo.
+sequência de ações a serem executadas -- isto é, um plano --, principalmente
+quando temos algum tipo de restrição no ambiente. Portanto, em muitos casos, é
+necessário que um agente estabeleça um plano de ações para resolver o problema
+ao qual foi designado a solucionar.
 
-Tomemos como exemplo um agente em um ambiente estocástico - onde não se consegue
-ter certeza sobre o resultado da execução de uma ação - e não observável, como
-não temos certeza sobre o estado do ambiente, nem sobre o resultado de nossas
-ações, precisamos estabelecer um plano onde podemos tratar as dificuldades que o
-ambiente nos impõe.
+Tomemos como exemplo um agente em um ambiente estocástico -- onde não se
+consegue ter certeza sobre o resultado da execução de uma ação -- e
+não-observável. Como não temos certeza sobre o estado do ambiente, nem sobre o
+resultado de nossas ações, precisamos estabelecer um plano onde podemos tratar
+as dificuldades que o ambiente nos impõe.
 
 Portanto, podemos definir um sistema planejador como um sistema que tem como
 saída um plano a ser executado e como entrada os seguintes componentes
 \cite{Woolridge:2001:IMS:559667}:
 
-\begin{description} \item [Objetivos] Também chamados de intenções ou tarefas, é
-algo que o agente deseja obter, manter ou evitar.  \item [Crenças] Tudo o que um
-agente sabe sobre o estado do ambiente.  \item [Ações] Tudo o que um agente pode
-executar no ambiente onde está inserido.
+\begin{description}
+\item [Objetivos]
+Também chamados de intenções ou tarefas. É algo que o agente deseja obter,
+manter ou evitar.
+
+\item [Crenças]
+Tudo o que um agente sabe sobre o estado do ambiente.
+
+\item [Ações]
+Tudo o que um agente pode executar no ambiente onde está inserido.
 \end{description}
+
 A ideia principal para a construção de um sistema planejador se dá através da
 extensão da representação de crenças, objetivos e ações com o uso de algum tipo
 de linguagem formal (normalmente lógica de primeira ordem, ou algum subconjunto
@@ -419,14 +410,14 @@ planejamento até hoje.
 \section{Aprendizado de Máquina}
 
 O sucesso ou não de um agente depende diretamente das ações que o mesmo toma na
-busca de seus objetivos, dessa forma, os agentes que vimos até então, realizam
-as ações as quais foram programados a fazer no ambiente onde atuam. Porém,
-quando não se tem um conhecimento total do ambiente, é difícil projetar - com as
-técnicas que vimos até então - um agente que seja assertivo nas suas ações,
+busca de seus objetivos. Os agentes que vimos até então realizam as ações as
+quais foram programados a fazer no ambiente onde atuam. Porém, quando não se
+tem um conhecimento total prévio do ambiente, é difícil projetar -- com as
+técnicas que vimos até então -- um agente que seja assertivo nas suas ações,
 justamente porque, em alguns tipos de ambiente, não é possível garantir que as
 ações foram executadas conforme o esperado, além de não ser possível observar
-o ambiente após essa execução, o que faz com que seja necessário o uso de alguma
-outra técnica para o desenvolvimento do mesmo.
+o ambiente após essa execução. Isto faz com que seja necessário o uso de alguma
+outra técnica para o desenvolvimento de agentes.
 
 Nesse contexto, surge a área de \textbf{aprendizado de máquina}, que estuda
 agentes capazes de aprender através das experiências adquiridas na realização de
@@ -439,7 +430,7 @@ as características do ambiente. Quando um agente tem um retorno esperado da
 execução de uma ação e, ao executá-la, recebe do ambiente o retorno correto,
 chamamos de \textbf{aprendizado supervisionado}, ou seja, o agente consegue
 medir a qualidade de suas ações através de tal tipo de aprendizado. Por outro
-lado, quando não se tem a informação do valor esperado de uma ação, porém, é
+lado, quando não se tem a informação do valor esperado de uma ação mas é
 possível ter algum tipo de saída do ambiente que permita saber se o agente está
 mais próximo de cumprir o seu objetivo, chamamos de \textbf{aprendizado por
 reforço}. Quando não se tem nenhuma informação sobre o quão correto são os
@@ -457,31 +448,31 @@ computador a realizar o mesmo é uma tarefa bem mais difícil de se expressar
 algoritmicamente.
 
 Portanto, o estudo do comportamento do cérebro humano abre um novo campo de
-estudo na área de inteligência artificial: \textbf{as redes neurais}. Tais redes
-têm como objetivo simular o cérebro humano através do uso de algoritmos e
-fórmulas matemáticas, possibilitando que uma máquina seja capaz de pensar e
-raciocinar de forma semelhante aos seres humanos. A ideia geral de tal técnica
-consiste em, através das estruturas do cérebro simuladas algoritmicamente,
-obter as percepções que o agente precisa e tomar decisões com base nelas. Além
-disso, as decisões tomadas por uma rede neural são baseadas no conhecimento
-obtido através do que se é chamado de \textbf{treinamento}, que consiste em
-aprender através de exemplos, permitindo que os neurônios implementados
-através de algoritmos compreendam os padrões estabelecidos nos exemplos -
-também chamados de conjuntos de treinamento - e passem a ter uma espécie de
-consciência, tornando-se cada vez mais assertivos em relação ao quanto são
-treinados, sendo capazes assim de raciocionar e resolver os próximos problemas
-por si só (sem a necessidade de treinamento). Uma rede neural pode ser
-constituída de inúmeros neurônios, podendo estes serem
-agrupados em múltiplas camadas para a estruturação de uma rede.
+estudo na área de inteligência artificial: as \textbf{redes neurais}. Estas têm
+como objetivo simular o cérebro humano através do uso de algoritmos e fórmulas
+matemáticas, possibilitando que uma máquina seja capaz de pensar e raciocinar de
+forma semelhante aos seres humanos. A ideia geral consiste em, através das
+estruturas do cérebro simuladas algoritmicamente, obter as percepções que o
+agente precisa e tomar decisões com base nelas. Além disso, as decisões tomadas
+por uma rede neural são baseadas no conhecimento obtido através do que se é
+chamado de \textbf{treinamento}, que consiste em aprender através de exemplos.
+Isto permite que os neurônios implementados através de algoritmos compreendam os
+padrões estabelecidos nos exemplos -- também chamados de conjuntos de
+treinamento -- e passem a ter uma espécie de consciência, tornando-se cada vez
+mais assertivos conforme são treinados mais. Assim, são capazes assim de
+raciocionar e resolver os próximos problemas por si só (sem a necessidade de
+treinamento). Uma rede neural pode ser constituída de inúmeros neurônios,
+podendo serem agrupados em múltiplas camadas para a estruturação de uma rede.
 
 Dependendo do problema a ser desenvolvido, necessitamos de uma longa cadeia de
 computação, sendo necessário, por exemplo, interligar múltiplas redes neurais.
 Além disso, muitos dos problemas a serem desenvolvidos requerem o uso de
 \textbf{ aprendizado não supervisionado}, algo que não é coberto nas redes
-neurais convencionais - baseadas em \textbf{treinamento supervisionado}.
-Portanto, para tais tipos de rede, utilizam-se técnicas de \textbf{\textit{deep
-learning}} \cite{DBLP:journals/corr/Schmidhuber14}. Inclusive, tal técnica
-pode ser usada para, por exemplo, jogar alguns jogos \cite{mnih-atari-2013}.
+neurais convencionais -- baseadas em \textbf{treinamento supervisionado}. Para
+contornar estes problemas, utilizam-se técnicas de \textbf{\textit{deep
+learning}} \cite{DBLP:journals/corr/Schmidhuber14}. Esta técnica já foi
+utilizada para, por exemplo, criar agentes capazes de jogar alguns jogos com
+autonomia \cite{mnih-atari-2013}.
 
 Por fim, tais estudos permitem que problemas como pronunciação de palavras e
 frases, reconhecimento de escrita e direção automatizada de veículos
