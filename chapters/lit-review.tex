@@ -6,7 +6,7 @@ que decide explorar uma caverna misteriosa. O local contém tesouros fabulosos,
 mas também está repleto de perigos. O objetivo principal do jogador é explorar
 estas cavernas subterrâneas e coletar a maior quantia de tesouros possível
 enquanto evita ser abatido pelos diversos inimigos e armadilhas espalhadas pelo
-ambiente. O jogo 2D segue o estilo \textit{platformer} - estilo de jogo que
+ambiente. O jogo 2D segue o estilo \textit{platformer} - tipo de jogo que
 envolve guiar um personagem através de plataformas suspensas e obstáculos para
 obter progresso no jogo.
 
@@ -25,7 +25,7 @@ tenha que recomeçar o jogo desde o seu início, perdendo todo o progresso obtid
 até então.
 
 O jogo é dividido em 4 áreas principais: \textbf{As Minas}, \textbf{A Selva},
-\textbf{As Cavernas De Gelo} e \textbf{O Templo}. Cada área possúi um estilo de
+\textbf{As Cavernas De Gelo} e \textbf{O Templo}. Cada área possui um estilo de
 mapa e aparência única. O nível de dificuldade também aumenta gradativamente,
 principalmente porque os inimigos vão se tornando cada vez mais fortes. Além das
 áreas principais, existem duas áreas secretas: \textbf{O Mercado Negro} e
@@ -55,8 +55,8 @@ podem ser encontradas no fórum oficial da \textit{Mossmouth} -- empresa
 desenvolvedora de jogos criada por Derek Yu -- \cite{SPELUNKYFORUM}, são
 correções de \textit{bugs}, mapas customizados ou até mesmo modos de jogo
 completamente diferentes do jogo original. Pode-se dizer que dar esta liberdade
-para a comunidade do jogo é uma das coisas que ajuda a manter sua base de
-jogadores e atraem novos até hoje.
+para a comunidade do jogo é um dos fatores que ajuda a manter sua base de
+jogadores e atraem novos jogadores até hoje.
 
 O motor GameMaker disponibiliza diversas ferramentas que facilitam o trabalho
 do desenvolvedor. Contando com funcionalidades como editores de
@@ -78,15 +78,17 @@ outros.} \end{figure}
 
 %----------
 \section{Plataformas de Testes para Inteligência Artificial}
-Existe uma relação mutualmente benéfica entre a área de inteligência artificial
+Existe uma relação mutuamente benéfica entre a área de inteligência artificial
 e jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
-técnicas e algoritmos de inteligência artificial com o intuito de enriquecer seu
-conteúdo. O jogo \textbf{Black \& White} da desenvolvedora \textit{Lionhead
-Studios}, por exemplo, incorporou as técnicas de agentes BDI, árvores de decisão
-e redes neurais para ditar o comportamento de alguns seus personagens
-\cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da desenvolvedora
-\textit{Monolith Productions}, utilizou os conceitos de planejamento para
-aumentar o realismo das decisões tomadas por seus agentes \cite{FEARPLANNING}.
+técnicas e algoritmos de inteligência artificial com o intuito de enriquecer
+seu conteúdo. O jogo \textbf{Black \& White}, da desenvolvedora
+\textit{Lionhead Studios}, por exemplo, incorporou as técnicas de agentes BDI,
+árvores de decisão e redes neurais \footnote{Explica-se o funcionamento destas
+técnicas na seção \ref{section:agents}}  para ditar o comportamento de alguns
+seus personagens \cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da
+desenvolvedora \textit{Monolith Productions}, utilizou os conceitos de
+planejamento para aumentar o realismo das decisões tomadas por seus agentes
+\cite{FEARPLANNING}.
 
 Do outro lado, o campo da inteligência artificial se beneficia ao utilizar os
 jogos como plataformas de teste para suas técnicas e algoritmos. Jogos digitais
@@ -98,9 +100,10 @@ impraticáveis no mundo real. Ademais, possuem a vantagem de serem programas de
 computador, o que significa que, por muitas vezes, podem acelerar a velocidade
 na qual testes são executados, ou ainda executar múltiplos testes em paralelo.
 A natureza lúdica dos jogos também são um ponto importante a ser ressaltado,
-pois ajudam a motivar os pesquisadores, além de resultar na adesão de outros.
-Estas são algumas das características dos jogos digitais que fazem com que
-sejam atraentes para pesquisadores da área de inteligência artificial.
+pois ajudam a motivar os pesquisadores, além de resultar na adesão de novos
+pesquisadores.  Estas são algumas das características dos jogos digitais que
+fazem com que sejam atraentes para pesquisadores da área de inteligência
+artificial.
 
 Tendo este apanhado de informações em mente, pesquisadores e entusiastas da área
 acabam desenvolvendo \textit{frameworks} de inteligência artificial em cima de
@@ -109,7 +112,7 @@ jogos existentes para servir de plataforma de teste. Um exemplo disso é o
 \textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
 especificamente para isso, como foi o caso do projeto \textbf{TORCS, The Open
 Racing Car Simulator}, um simulador de corridas de carro que permite que
-desenvolvedores programem a inteligência de carros e compitam entre sí
+desenvolvedores programem a inteligência de carros e compitam entre si
 \cite{TORCSWEB}.
 
 \subsection{Competições de Inteligência Artificial em Jogos Digitais}
@@ -160,13 +163,13 @@ incentivo.
 %----------
 \section{SpelunkBots}
 Utilizando o código-fonte de Spelunky, Daniel Scales e Thomas Thompson, da
-Universidade de Derby, criaram \textit{SpelunkBots} \cite{SPELUNKBOTSWEB}, um
-\textit{framework} que permite a programação de \textit{bots} para o jogo
-Spelunky. Um dos objetivos dos criadores é utilizar a aplicação para criar uma
-competição de inteligência artificial para o jogo. A aplicação se comunica com
-o código-fonte original e permite a utilização das linguagens \textit{GML}
-(padrão do GameMaker) e \textit{C++} para a descrição do comportamento de
-\textit{bots}.
+Universidade de Derby no Reino Unido, criaram o \textit{SpelunkBots}
+\cite{SPELUNKBOTSWEB}, um \textit{framework} que permite a programação de
+\textit{bots} para o jogo Spelunky. Um dos objetivos dos criadores é utilizar a
+aplicação para criar uma competição de inteligência artificial para o jogo. A
+aplicação se comunica com o código-fonte original e permite a utilização das
+linguagens \textit{GML} (padrão do GameMaker) e \textit{C++} para a descrição
+do comportamento de \textit{bots}.
 
 A \textit{API} possibilita que o desenvolvedor resgate informações de objetos
 estáticos e dinâmicos contidos no ambiente do jogo, como o terreno do jogo ou a
@@ -178,16 +181,16 @@ limitando o conhecimento do ambiente que pode ser obtido pela inteligência
 artificial.  Para objetos estáticos, uma vez que o jogador visualizou o objeto
 ele poderá receber informações sobre ele permanentemente. Para objetos
 dinâmicos, o \textit{bot} só poderá receber informações sobre eles se os mesmos
-estiverem sendo visualizados pelo jogador.
+estiverem sendo visualizados por ele.
 
 Para permitir que o \textit{bot} execute ações, o desenvolvedor pode enviar
 comandos através da simulação de aperto de botões. Os comandos são enviados
 após o processamento realizado pelo \textit{bot}, ao fim de cada atualização do
 jogo. O resultado das ações executadas depende de quais itens o jogador tem
 equipado no momento. Por exemplo, enviar um comando de salto enquanto o jogador
-possúi um \textit{jetpack} equipado fará com que o mesmo salte mais alto. Tendo
+possui um \textit{jetpack} equipado fará com que o mesmo salte mais alto. Tendo
 isto em mente, a \textit{API} permite que o desenvolvedor saiba quais itens o
-jogador possúi atualmente.
+jogador possui atualmente.
 
 O jogo original foi modificado para possibilitar que o jogador crie níveis
 customizados e pule para qualquer nível ou área do jogo, caso queira testar as
@@ -202,9 +205,9 @@ informações importantes -- como, por exemplo, o estado do \textit{bot}, sua
 trajetória e o ambiente -- diretamente na tela do jogo, enquanto o programa
 está em execução.
 
-Os criadores disponibilizam alguns \textit{bots} e níveis básicos para
-exemplificar a utilização da \textit{API}, fornecendo, assim, uma base inicial
-aos competidores.
+Os criadores da competição disponibilizam alguns \textit{bots} e níveis básicos
+para exemplificar a utilização da \textit{API}, fornecendo, assim, uma base
+inicial aos competidores.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunkbots-debug-screen.png}
@@ -214,7 +217,7 @@ programa SpelunkBots.} \end{figure}
 
 
 %----------
-\section{Agentes Racionais}
+\section{\label{section:agents}Agentes Racionais}
 Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz
 de perceber o ambiente onde está situado, através de seus sensores, podendo
 executar ações nesse ambiente conforme sua necessidade através de seus
