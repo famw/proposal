@@ -12,59 +12,103 @@ definidos no capítulo \ref{chap:objectives}:
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|}
 \cline{2-11}
 {\bf}                                 & \multicolumn{3}{c|}{{\bf Abr/16}} & \multicolumn{4}{c|}{{\bf Mai/16}}     & \multicolumn{3}{c|}{{\bf Jun/16}} \\ \hline
-\multicolumn{1}{|c|}{{\bf Objetivo}}  & {\bf 1} & {\bf 2} & {\bf 3}       & {\bf 4} & {\bf 5} & {\bf 6} & {\bf 7} & {\bf 8} & {\bf 9} & {\bf 10}      \\ \hline
+\multicolumn{1}{|c|}{{\bf Objetivo}}  & {\bf 1} & {\bf 2} & {\bf 3}	     & {\bf 4} & {\bf 5} & {\bf 6} & {\bf 7} & {\bf 8} & {\bf 9} & {\bf 10}      \\ \hline
 \multicolumn{1}{|c|}{{\bf 1}}         & X       & X       & X             &         &         &         &         &         &         &               \\ \hline
-\multicolumn{1}{|c|}{{\bf 2}}         &         &         &               & X       & X       & X       &         &         &         &               \\ \hline
-\multicolumn{1}{|c|}{{\bf 3}}         &         &         &               &         &         &         & X       & X       & X       & X             \\ \hline
+\multicolumn{1}{|c|}{{\bf 2}}         &         &         &               & X       &         &         &         &         &         &               \\ \hline
+\multicolumn{1}{|c|}{{\bf 3}}         &         &         &               &         & X       &         &         &         &         &               \\ \hline
+\multicolumn{1}{|c|}{{\bf 4}}         &         &         &               &         &         &  X      & X       &         &         &               \\ \hline
+\multicolumn{1}{|c|}{{\bf 5}}         &         &         &               &         &         &         & X       & X       &         &               \\ \hline
+\multicolumn{1}{|c|}{{\bf 6}}         &         &         &               &         &         &         &         &         & X       & X             \\ \hline
 \end{tabular}
 \end{table}
 
 \section{Detalhamento dos Objetivos}
 
 \begin{enumerate}
-    \item Estudar o jogo Spelunky
+    \item Estudar o jogo Spelunky e o \textit{framework} SpelunkBots
     \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
         \item [Descrição]
-            Obtenção de maior conhecimento sobre os desafios impostos pelo
-            jogo; entendimento das mecânicas e controles de jogo, padrões de
-            ataque de inimigos e funcionamento das armadilhas; compreensão da
-            utilidade dos itens e equipamentos, bem como as sinergias entre
-            eles; estudo do algoritmo de geração de níveis utilizado;
-            elaboração de táticas que auxiliem a vencer o jogo;
+			Obtenção de maior conhecimento sobre os desafios impostos pelo
+			jogo; entendimento das mecânicas e controles de jogo, padrões de
+			ataque de inimigos e funcionamento das armadilhas;  estudo do
+			algoritmo de geração de níveis utilizado; obtenção de maior
+			conhecimento sobre detalhes de funcionamento do SpelunkBots; estudo
+			dos \textit{bots} e níveis disponibilizados de exemplo de uso da
+			\textit{API}; detecção das limitações e restrições impostas pelo
+			uso do SpelunkBots.
         \item [Iterações]
             1, 2 e 3
         \item [Período]
             11/04/2016 a 02/05/2016
     \end{description}
 
-    \item Estudar o \textit{framework} SpelunkBots
+    \item Estudar agentes BDI
     \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
         \item [Descrição]
-            Obtenção de maior conhecimento sobre detalhes de funcionamento do
-            \textit{framework}; estudo da \textit{API} fornecida; estudo dos
-            \textit{bots} e níveis disponibilizados de exemplo de uso da
-            \textit{API}; detecção das limitações e restrições impostas pelo
-            uso desta tecnologia.
+			Pesquisa e leitura de artigos científicos sobre agentes BDI;
+			pesquisa e leitura de conteúdo sobre uso da técnica para criação de
+			criação de agentes em jogos digitais; levantamento de ferramentas
+			que	facilitem o uso da técnica; realizar uma modelagem do uso de
+			agentes BDI com o SpelunkBots.
         \item [Iterações]
-            4, 5 e 6
+            4
         \item [Período]
-            02/05/2016 a 23/05/2016
+            02/05/2016 a 09/05/2016
+    \end{description}
+	
+	\item Estudar planejamento
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
+        \item [Descrição]
+            Pesquisa e leitura de artigos científicos sobre planejamento;
+			pesquisa e leitura de conteúdo sobre uso da técnica para criação de
+			criação de agentes em jogos digitais; levantamento de ferramentas
+			que	facilitem o uso da técnica; realizar uma modelagem do uso de
+			planejamento com o SpelunkBots.
+        \item [Iterações]
+            5
+        \item [Período]
+            09/05/2016 a 16/05/2016
     \end{description}
 
-    \item Estudar técnicas de inteligência artificial para auxiliar na solução
-    do problema.
+	\item Estudar aprendizado de máquina
     \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
         \item [Descrição]
-            Pesquisa e leitura de artigos científicos que aplicaram conceitos e
-            técnicas de inteligência artificial a jogos digitais; levantamento
-            de técnicas de inteligência artificial que auxiliem na construção
-            de \textit{bots} para jogos digitais; escolha da técnica ou
-            combinação de técnicas mais indicada para o desenvolvimento dos
-            \textit{bots} para Spelunky.
-        \item [Iterações]
-            7, 8, 9 e 10
+        Pesquisa e leitura de artigos científicos sobre aprendizado de máquina;
+		pesquisa e leitura de conteúdo sobre uso da técnica para criação de
+		criação de agentes em jogos digitais; levantamento de ferramentas
+		que	facilitem o uso da técnica; realizar uma modelagem do uso de
+		aprendizado de máquina com o SpelunkBots.
+		\item [Iterações]
+            6 e 7
         \item [Período]
-            23/05/2016 a 20/06/2016
+            16/05/2016 a 30/05/2016
+    \end{description}
+
+	\item Estudar redes neurais.
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
+        \item [Descrição]
+        Pesquisa e leitura de artigos científicos sobre redes neurais;
+		pesquisa e leitura de conteúdo sobre uso da técnica para criação de
+		criação de agentes em jogos digitais; levantamento de ferramentas
+		que	facilitem o uso da técnica; realizar uma modelagem do uso de
+		redes neurais com o SpelunkBots.
+		\item [Iterações]
+            7 e 8
+        \item [Período]
+            23/05/2016 a 06/06/2016
+    \end{description}
+
+	\item Selecionar técnicas de inteligência artificial para auxiliar na
+	solução do problema
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Descrição}]
+        \item [Descrição]
+			Apuração do conhecimento obtido sobre as técnicas selecionadas;
+			seleção de uma técnica ou conjunto de técnicas que auxiliem no
+			desenvolvimento de \textit{bots} para o jogo Spelunky.
+        \item [Iterações]
+            9 e 10
+        \item [Período]
+            06/06/2016 a 20/06/2016
     \end{description}
 
 \end{enumerate}
