@@ -175,38 +175,43 @@ estáticos e dinâmicos contidos no ambiente do jogo, como o terreno do jogo ou 
 posição de tesouros, armadilhas e inimigos. Contudo, o objetivo da \textit{API}
 disponibilizada por SpelunkBots é fazer com que a informação recebida pelo
 \textit{bot} se assemelhe ao máximo com a percepção de um jogador humano.  Para
-tal, o \textit{framework} instaurou um sistema de \textit{fog of war},
+tal, o \textit{framework} implementa um sistema de \textit{fog of war},
 limitando o conhecimento do ambiente que pode ser obtido pela inteligência
 artificial.  Para objetos estáticos, uma vez que o jogador visualizou o objeto
 ele poderá receber informações sobre ele permanentemente. Para objetos
 dinâmicos, o \textit{bot} só poderá receber informações sobre eles se os mesmos
-estiverem sendo visualizados por ele.
+estiverem sendo visualizados por ele. A imagem \ref{fig:spelunkbots-fow} ilustra
+um exemplo de funcionamento do sistema.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=.65\textwidth]{fig/spelunkbots-fow.png}
+\caption {\label{fig:spelunkbots-fow}Visualização do sistema de textit{fog of
+war} demonstrando a diferença de informação recebida de elementos dentro e fora
+do campo de visão do jogador.}
+\end{figure}
 
 Para permitir que o \textit{bot} execute ações, o desenvolvedor pode enviar
-comandos através da simulação de aperto de botões. Os comandos são enviados
-após o processamento realizado pelo \textit{bot}, ao fim de cada atualização do
-jogo. O resultado das ações executadas depende de quais itens o jogador tem
-equipado no momento. Por exemplo, enviar um comando de salto enquanto o jogador
-possui um \textit{jetpack} equipado fará com que o mesmo salte mais alto. Tendo
-isto em mente, a \textit{API} permite que o desenvolvedor saiba quais itens o
-jogador possui atualmente.
+comandos através da simulação de aperto de botões. Os comandos são enviados após
+o processamento realizado pelo \textit{bot}, ao fim de cada atualização do jogo.
+O resultado das ações executadas depende de quais itens o jogador tem equipado
+no momento. Por exemplo, enviar um comando de salto enquanto o jogador possui um
+\textit{jetpack} equipado fará com que ele salte mais alto. Tendo isto em mente,
+a \textit{API} permite que o desenvolvedor saiba quais itens o jogador possui
+atualmente.
 
 O jogo original foi modificado para possibilitar que o jogador crie níveis
 customizados e pule para qualquer nível ou área do jogo, caso queira testar as
-capacidades de seu \textit{bot} em cenários específicos ou mais difíceis sem
-ter que jogar o jogo desde o início. O SpelunkBots também conta com uma opção
-de acelerar ou desacelerar a partida. Isto facilitaria a implementação de uma
+capacidades de seu \textit{bot} em cenários específicos ou mais difíceis sem ter
+que jogar o jogo desde o início. O SpelunkBots também conta com uma opção de
+acelerar ou desacelerar a partida. Isto facilitaria a implementação de uma
 abordagem focada em aprendizado de máquina, pois aceleraria o processo de
-aprendizado.
-
-O \textit{framework} oferece ao desenvolvedor a capacidade de visualizar
-informações importantes -- como, por exemplo, o estado do \textit{bot}, sua
-trajetória e o ambiente -- diretamente na tela do jogo, enquanto o programa
-está em execução.
-
-Os criadores da competição disponibilizam alguns \textit{bots} e níveis básicos
-para exemplificar a utilização da \textit{API}, fornecendo, assim, uma base
-inicial aos competidores.
+aprendizado. O \textit{framework} oferece ao desenvolvedor a capacidade de
+visualizar informações importantes -- como, por exemplo, o estado do
+\textit{bot}, sua trajetória e o ambiente -- diretamente na tela do jogo,
+enquanto o programa está em execução. Os criadores da competição disponibilizam
+alguns \textit{bots} e níveis básicos para exemplificar a utilização da
+\textit{API}, fornecendo, assim, uma base inicial aos competidores.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunkbots-debug-screen.png}
