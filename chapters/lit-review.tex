@@ -272,23 +272,23 @@ observáveis}), \textbf{determinísticos} ou \textbf{estocásticos},
 \textbf{semi-dinâmicos} ou \textbf{estáticos} e \textbf{discretos} ou
 \textbf{contínuos}.
 
-Um ambiente é \textbf{acessível} caso seja possível perceber os estados do
+Um ambiente é \textbf{acessível} caso seja possível acessar as informações relevantes do
 ambiente através dos sensores de um agente, sendo \textbf{inacessível} caso
 contrário. Quando um agente tem certeza do próximo estado ao executar uma ação
 no ambiente, trata-se de um ambiente \textbf{determinístico}, quando não se tem
 essa certeza, chamamos o ambiente de \textbf{estocástico}. Também existem
 ambientes \textbf{episódicos} ou \textbf{sequenciais}, sendo ambientes
-episódicos aqueles onde um episódio não influencia no próximo. Dessa forma,
-ambientes sequenciais guardam algum tipo de memória dos episódios anteriories,
-usando essa memória nos episódios subsequentes, gravando outras informações
-sobre estes caso necessário. Caso um ambiente possa sofrer mudanças sem ações
-do agente, será um ambiente \textbf{dinâmico}. Caso contrário, chamamos esse
-tipo de ambiente de \textbf{estático}. Se o ambiente não muda de acordo com o
-tempo, mas o agente muda sua maneira de agir (melhorando sua atuação, por
-exemplo), chamamos o ambiente de \textbf{semi-dinâmico}. Por fim, classificamos
-os ambientes como \textbf{discretos} ou \textbf{contínuos}, sendo ambientes
-discretos aqueles onde se têm um número finito de ações possíveis e de
-percepções.
+episódicos aqueles onde as ações previamente executadas não influenciam nas
+escolhas das ações futuras. Dessa forma, ambientes sequenciais guardam algum
+tipo de memória dos episódios anteriories, usando essa memória nos episódios
+subsequentes, gravando informações caso necessário. Caso um ambiente possa
+sofrer mudanças sem ações do agente, será um ambiente \textbf{dinâmico}. Caso
+contrário, chamamos esse tipo de ambiente de \textbf{estático}. Se o ambiente
+não muda de acordo com o tempo, mas o agente muda sua maneira de agir
+(melhorando sua atuação, por exemplo), chamamos o ambiente de
+\textbf{semi-dinâmico}. Por fim, classificamos os ambientes como
+\textbf{discretos} ou \textbf{contínuos}, sendo ambientes discretos aqueles
+onde se têm um número finito de ações possíveis e de percepções.
 
 \subsection{Agentes BDI}
 O estudo de agentes racionais faz com que seja necessário, além de
