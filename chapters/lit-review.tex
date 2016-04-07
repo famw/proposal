@@ -357,48 +357,24 @@ características.
 \section{Planejamento}
 
 A solução para muitos tipos de problemas pode ser expressa através de uma
-sequência de ações a serem executadas -- isto é, um plano --, principalmente
-quando temos algum tipo de restrição no ambiente. Portanto, em muitos casos, é
-necessário que um agente estabeleça um plano de ações para resolver o problema
-ao qual foi designado a solucionar.
-
-Tomemos como exemplo um agente em um ambiente estocástico -- onde não se
-consegue ter certeza sobre o resultado da execução de uma ação -- e
-não-observável. Como não temos certeza sobre o estado do ambiente, nem sobre o
-resultado de nossas ações, precisamos estabelecer um plano onde podemos tratar
-as dificuldades que o ambiente nos impõe.
-
-Portanto, podemos definir um sistema planejador como um sistema que tem como
-saída um plano a ser executado e como entrada os seguintes componentes
-\cite{Woolridge:2001:IMS:559667}:
-
-\begin{description}
-\item [Objetivos]
-Também chamados de intenções ou tarefas. É algo que o agente deseja obter,
-manter ou evitar.
-
-\item [Crenças]
-Tudo o que um agente sabe sobre o estado do ambiente.
-
-\item [Ações]
-Tudo o que um agente pode executar no ambiente onde está inserido.
-\end{description}
+sequência de ações a serem executadas -- isto é, um plano. Em ambientes
+acessíveis, é possível estabelecer um modelo completo e correto sobre o
+ambiente, permitindo então que, dado um objetivo a alcançar, seja possível
+estabelecer um plano que chega nesse objetivo.
 
 A ideia principal para a construção de um sistema planejador se dá através da
-extensão da representação de crenças, objetivos e ações com o uso de algum tipo
-de linguagem formal (normalmente lógica de primeira ordem, ou algum subconjunto
-da mesma). Isso permite que o planejador possa fazer uma ligação direta entre as
-ações e os estados, podendo, portanto, considerar apenas ações relevantes para o
-plano \cite{Russell:1995:AIM:193191}. As ações passam a ter pré-condições e
-efeitos, que faz com que o agente, antes de executar uma ação, tenha que ter um
-conhecimento prévio do ambiente. Assim, após a execução da mesma, seus efeitos
-fazem com que seja alterado o conhecimento sobre o ambiente.
-
-O uso de uma linguagem formal nessa tarefa permite que os componentes de um
-planejador sejam expressos de uma maneira onde seja possível fazer operarações
-sobre tais conjecturas, facilitando o processo de geração de um plano.
-
-Um dos primeiros planejadores a surgir foi o STRIPS
+utilização de algum tipo de linguagem formal (normalmente lógica de primeira
+ordem, ou algum subconjunto dela) para representar \textit{estados},
+\textit{objetivos} e \textit{ações}. Isso permite que o planejador possa fazer
+uma ligação direta entre as ações e os estados, podendo, portanto, considerar
+apenas ações relevantes para o plano \cite{Russell:1995:AIM:193191}. As ações
+passam a ter pré-condições e efeitos, fazendo com que o agente, antes de
+executar uma ação, tenha que ter um conhecimento prévio do ambiente. Assim,
+após executar a ação, seus efeitos alteram o conhecimento sobre o ambiente. O
+uso de uma linguagem formal nessa tarefa permite que os componentes de um
+planejador sejam expressos de uma maneira onde seja possível realizar
+operarações sobre tais conjecturas, facilitando o processo de geração de um
+plano. Um dos primeiros planejadores a surgir foi o STRIPS
 \cite{Fikes:1971:SNA:1622876.1622939}, em $1971,$ sendo utilizado como
 referência para a solução de muitos problemas de planejamento até hoje.
 
