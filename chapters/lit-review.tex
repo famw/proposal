@@ -219,50 +219,46 @@ programa SpelunkBots.} \end{figure}
 
 %----------
 \section{\label{section:agents}Agentes Racionais}
-Um agente pode ser visto como todo e qualquer tipo de entidade que seja capaz
-de perceber o ambiente onde está situado, através de seus sensores, podendo
-executar ações nesse ambiente conforme sua necessidade através de seus
-atuadores \cite{Russell:1995:AIM:193191}. Para exemplificar, podemos tomar como
-exemplo o ser humano, que consegue perceber o ambiente através de seus olhos e
-ouvidos, conseguindo agir no ambiente com suas partes do corpo, como braços,
-pernas, mãos, etc \cite{Russell:1995:AIM:193191}.
-
-Portanto, podemos generalizar o conceito de agente racional como todo e
-qualquer tipo de agente que, no ambiente em que está inserido, toma ações que o
-deixam mais próximo de completar os objetivos os quais o mesmo está
-comprometido.
+Um agente pode ser visto como uma entidade capaz de utilizar seus sensores para
+perceber o ambiente onde está situado, sendo capaz de usar elementos atuadores
+para executar ações nesse ambiente conforme sua necessidade
+\cite{Russell:1995:AIM:193191}. Para exemplificar, podemos tomar como exemplo o
+ser humano, que consegue perceber o ambiente através de seus olhos e ouvidos,
+atuando neste com suas partes do corpo, como braços, pernas, mãos, etc
+\cite{Russell:1995:AIM:193191}. Portanto, podemos generalizar o conceito de
+agente racional como todo e qualquer tipo de agente que, no ambiente em que
+está inserido, toma ações que o deixam mais próximo de completar os objetivos
+os quais o mesmo está comprometido.
 
 \textbf{Agentes reflexivos} são agentes que executam ações baseados em alguma
 situação percebida. Por exemplo, podemos ter um agente reflexivo que poderá
 fazer uma postagem em uma rede social, dado que uma outra pessoa fez uma
-postagem. Este tipo de agente não ``pensa'' sobre a ação que está executando,
-simplesmente a executa baseado no que percebeu anteriormente. Estes agentes têm
-como principal característica não guardarem tipo algum de informação das suas
-experiências passadas, sendo apenas reativos.
+postagem. Este tipo de agente simplesmente executa uma ação baseado no que
+percebeu anteriormente. Tais agentes têm como principal característica não
+guardarem tipo algum de informação das suas experiências passadas, sendo apenas
+reativos.
 
 Diferentemente dos agentes reflexivos, \textbf{agentes com memória} são capazes
 de guardar informações sobre as experiências passadas, podendo fazer o uso das
 mesmas para alcançar seus objetivos. A lembrança das experiências passadas
-fornece ao agente uma oportunidade de aprender, fazendo com que o mesmo evite
-ações não efetivas ou que escolha, entre um conjunto de possíveis ações, a que
-seja a mais efetiva.
+fornece ao agente uma oportunidade de utilizar melhor os seus recursos, sendo
+capaz de investí-los em ações mais efetivas do que as tomadas em experiências
+passadas.
 
 Além de ter memória, é necessário que um agente saiba quando obteve sucesso no
 que se propôs a fazer. Com isso, \textbf{agentes baseados em objetivos}
-conseguem tomar suas decisões - ações a executar - com base na ação que os
-deixa mais próximos de alcançarem seus objetivos. O desafio desse tipo de
-agente é saber como alcançar esse objetivo, podendo ser usadas técnicas de
-busca e planejamento para determinar as possíveis ações a serem executadas para
-alcançá-lo.
+conseguem tomar suas decisões com base na ação que os deixa mais próximos de
+alcançarem seus objetivos. O desafio desse tipo de agente é saber como alcançar
+esse objetivo, podendo ser usadas técnicas de busca e planejamento para
+determinar as possíveis ações a serem executadas para alcançá-lo.
 
 Para alguns tipos de agente, chegar no objetivo pode não ser suficiente,
 podendo existir outros fatores na busca desse objetivo que possam influenciar
 no resultado final para agente. Por exemplo, um agente que joga um determinado
 jogo pode finalizar a partida com um certo número de pontos, porém, é mais
-satisfatório que o mesmo termine o jogo com o \textbf{maior} número de pontos
-possível. Estes são os \textbf{agentes baseados em utilidade}, que são capazes
-de medir os resultados de suas ações, escolhendo as que, além de alcançar seu
-objetivo, façam o mesmo da melhor maneira possível.
+satisfatório que termine o jogo com o \textbf{maior} número de pontos
+possível. Estes são os \textbf{agentes baseados em utilidade}, que, de um
+conjunto de ações disponíveis, selecionam e executam a que seja mais vantajosa.
 
 \subsection{Ambiente}
 Todas as ações que um agente pode executar, bem como suas percepções, ocorrem
