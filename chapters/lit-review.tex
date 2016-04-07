@@ -263,38 +263,32 @@ conjunto de ações disponíveis, selecionam e executam a que seja mais vantajos
 
 \subsection{Ambiente}
 Todas as ações que um agente pode executar, bem como suas percepções, ocorrem
-no ambiente onde o agente está inserido. Porém, existem diferentes tipos de
-ambientes, que, dependendo de sua característica, podem dificultar o trabalho
-de um determinado agente.
-
-Primeiramente, os ambientes podem ser \textbf{acessíveis} ou
+no \textbf{ambiente} onde o agente está inserido. Porém, existem diferentes
+tipos de ambientes, que, dependendo de sua dimensão, podem dificultar o trabalho
+de um agente. Podemos classificar os ambientes em \textbf{acessíveis} ou
 \textbf{inacessíveis} (também chamados de \textbf{observáveis} ou \textbf{não
-observáveis}), sendo um ambiente acessível aquele que possibilita que o agente
-explore todas as suas características. Ambientes acessíveis permitem que o
-agente não precise guardar informações sobre o mesmo, visto que pode sempre
-``olhar'' para o ambiente e extraír as informações necessárias.
+observáveis}), \textbf{determinísticos} ou \textbf{estocásticos},
+\textbf{episódicos} ou \textbf{sequenciais}, \textbf{dinâmicos},
+\textbf{semi-dinâmicos} ou \textbf{estáticos} e \textbf{discretos} ou
+\textbf{contínuos}.
 
-Também existem os ambientes \textbf{determinísticos} ou \textbf{estocásticos},
-tratando-se de um ambiente deterministico aquele onde um agente consegue prever
-o próximo estado da sua busca pelo objetivo através da aplicação das ações
-escolhidas. Assim, um ambiente não determinístico não garante que a ação
-executada pelo agente irá surtir o efeito esperado.
-
-Além destes, existem ambientes \textbf{episódicos} ou \textbf{sequenciais},
-sendo ambientes episódicos aqueles onde um episódio não influencia no próximo.
-Dessa forma, ambientes sequenciais guardam algum tipo de memória dos epoisódios
-anteriories, fazendo o uso desta nos episódios subsequentes, gravando outras
-informações sobre tais episódios caso necessário.
-
-Caso um ambiente possa sofrer mudanças sem ações do agente, será um ambiente
-\textbf{dinâmico}. Caso contrário, chamamos esse tipo de ambiente de
-\textbf{estático}. Se o ambiente não muda de acordo com o tempo mas o agente
-muda sua maneira de agir (melhorando sua atuação, por exemplo), chamamos o
-ambiente de \textbf{semi-dinâmico}.
-
-Por fim, classificamos os ambientes como \textbf{discretos} ou
-\textbf{contínuos}, sendo ambientes discretos aqueles onde temos um número
-finito de possíveis estados.
+Um ambiente é \textbf{acessível} caso seja possível perceber os estados do
+ambiente através dos sensores de um agente, sendo \textbf{inacessível} caso
+contrário. Quando um agente tem certeza do próximo estado ao executar uma ação
+no ambiente, trata-se de um ambiente \textbf{determinístico}, quando não se tem
+essa certeza, chamamos o ambiente de \textbf{estocástico}. Também existem
+ambientes \textbf{episódicos} ou \textbf{sequenciais}, sendo ambientes
+episódicos aqueles onde um episódio não influencia no próximo. Dessa forma,
+ambientes sequenciais guardam algum tipo de memória dos episódios anteriories,
+usando essa memória nos episódios subsequentes, gravando outras informações
+sobre estes caso necessário. Caso um ambiente possa sofrer mudanças sem ações
+do agente, será um ambiente \textbf{dinâmico}. Caso contrário, chamamos esse
+tipo de ambiente de \textbf{estático}. Se o ambiente não muda de acordo com o
+tempo, mas o agente muda sua maneira de agir (melhorando sua atuação, por
+exemplo), chamamos o ambiente de \textbf{semi-dinâmico}. Por fim, classificamos
+os ambientes como \textbf{discretos} ou \textbf{contínuos}, sendo ambientes
+discretos aqueles onde se têm um número finito de ações possíveis e de
+percepções.
 
 \subsection{Agentes BDI}
 O estudo de agentes racionais faz com que seja necessário, além de
