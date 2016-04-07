@@ -364,19 +364,19 @@ estabelecer um plano que chega nesse objetivo.
 
 A ideia principal para a construção de um sistema planejador se dá através da
 utilização de algum tipo de linguagem formal (normalmente lógica de primeira
-ordem, ou algum subconjunto dela) para representar \textit{estados},
-\textit{objetivos} e \textit{ações}. Isso permite que o planejador possa fazer
-uma ligação direta entre as ações e os estados, podendo, portanto, considerar
+ordem ou algum subconjunto dela) para representar \textit{estados},
+\textit{objetivos} e \textit{ações}. Isso permite que o planejador faça uma
+ligação direta entre as ações e os estados, podendo, portanto, considerar
 apenas ações relevantes para o plano \cite{Russell:1995:AIM:193191}. As ações
 passam a ter pré-condições e efeitos, fazendo com que o agente, antes de
-executar uma ação, tenha que ter um conhecimento prévio do ambiente. Assim,
-após executar a ação, seus efeitos alteram o conhecimento sobre o ambiente. O
-uso de uma linguagem formal nessa tarefa permite que os componentes de um
-planejador sejam expressos de uma maneira onde seja possível realizar
-operarações sobre tais conjecturas, facilitando o processo de geração de um
+executar uma ação, tenha que ter um conhecimento prévio do estado atual do
+ambiente e após executar uma ação, seus efeitos modifiquem o estado do
+ambiente. O uso de uma linguagem formal nessa tarefa permite expressar os
+componentes do planejador de uma maneira que possibilite a realização de
+operações sobre tais conjecturas, facilitando o processo de geração de um
 plano. Um dos primeiros planejadores a surgir foi o STRIPS
-\cite{Fikes:1971:SNA:1622876.1622939}, em $1971,$ sendo utilizado como
-referência para a solução de muitos problemas de planejamento até hoje.
+\cite{Fikes:1971:SNA:1622876.1622939}, em $1971$. Este planejador é utilizado
+como referência para a solução de muitos problemas de planejamento até hoje.
 
 \section{Aprendizado de Máquina}
 
