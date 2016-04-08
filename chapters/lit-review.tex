@@ -290,70 +290,51 @@ o ambiente de \textbf{semi-dinâmico}. Por fim, classificamos os ambientes como
 onde se têm um número finito de ações possíveis e de percepções.
 
 \subsection{Agentes BDI}
-O estudo de agentes racionais faz com que seja necessário, além de
-compreender seus aspectos e características, entender como é possível
-realizar a implementação desse tipo de agente. A aplicação de técnicas
-convencionais para o desenvolvimento desses agentes é despendiosa e
-difícil de ser feita, verificada e mantida \cite{bdi-icmas95}, sendo
-então necessário o uso de outras técnicas para sua implementação.
+Baseados na teoria do raciocínio prático proposto por Bratman \cite{Bratman87},
+os pesquisadores Rao e Georgeff propuseram a arquitetura de software de agentes
+BDI (sigla para \textit{Belief}, \textit{Desire}, \textit{Intention})
+\cite{bdi-icmas95}, sendo possível representar agentes racionais através dessa
+arquitetura.
 
-Nesse contexto, surge a arquitetura de agentes BDI (sigla para \textit{Belief,
-Desire, Intentions}), capaz de modelar agentes racionais de uma maneira mais
-adequada. Tal arquitetura conta com alguns conceitos que permitem modelar
-agentes racionais, explicados a seguir:
+A formalização de um agente BDI se dá através dos conceitos de \textbf{crenças}
+(beliefs), \textbf{desejos} (desires) e \textbf{intenções} (intentions). As
+crenças tratam-se de coisas que o agente acredita saber, são chamadas de
+crenças pois podem não ser verdadeiras. São atualizadas e armazenadas na memória
+do agente a cada nova percepção. Os desejos tratam-se dos estados os quais um
+agente deseja atingir. As intenções representam o plano de ação que um agente
+BDI se compromete em busca dos seus desejos. Com estes três conceitos, é
+possível definir um algoritmo interpretador de agente BDI. O
+algoritmo a seguir mostra como é feito o uso desses conceitos:
 
-\begin{description}
-\item [Crenças (\textit{Beliefs})]
-Tudo aquilo que o agente acredita saber sobre o ambiente é chamado de
-``crença'', pois tal informação pode vir a não ser verdade.  As crenças são
-atualizadas e armazenadas na memória do agente a cada nova percepção do
-ambiente feita por ele.
-
-\item [Desejos (\textit{Desires})]
-Além de uma base de crenças, é necessário que um agente saiba o que deve ser
-feito para alcançar os seus objetivos. Tais ações são chamadas de desejos e
-representam o que um agente deseja fazer, além de descreverem os custos
-associados com a busca por este desejo.
-
-\item [Intenções (\textit{Intentions})]
-Diferentemente dos desejos, uma intenção é algo com o qual o agente se
-compromete a fazer em busca dos seus objetivos. Dessa forma, podemos ver as
-intenções como as ações que efetivamente serão executadas para alcançar os
-objetivos.
-\end{description}
-
-Com estes três conceitos, é possível definir um algoritmo interpretador de
-agente BDI. O algoritmo~\ref{alg:BDIINTERPRETERALG} mostra como é feito o uso
-desses conceitos \cite{BDIFROMTHEORYTOPRACTICE}.
-
-\begin{algorithm}[htb] \begin{center}
+\begin{algorithm}[htb]
+\begin{center}
 	% Um exemplo de algoritmo utilizando a pacote 'algorithmic'
 	%\algsetup{linenosize=\small,linenodelimiter=.}
-	\begin{algorithmic}[1] \STATE inicializar(); \STATE \WHILE {true} \STATE
-	opções $\gets$ gerar-opções(fila-de-eventos); \STATE opções-escolhidas
-	$\gets$ deliberar(opções); \STATE atualizar-intenções(opções-escolhidas);
-	\STATE executar(); \STATE buscar-novos-eventos-externos(); \STATE
-	esquecer-atitutes-de-sucesso(); \STATE esquecer-atitudes-impossíveis();
-	\ENDWHILE \end{algorithmic} \end{center} \caption[Algoritmo para representar
-	um interpretador de agente BDI.] {\label{alg:BDIINTERPRETERALG} Algoritmo
-	para representar um interpretador de agente BDI, utilizando os conceitos de
-	crenças, desejos e intenções para a sua implementação.} \end{algorithm}
+	\begin{algorithmic}[1]
+        \STATE inicializar();
+        \STATE \WHILE {true}
+            \STATE opções $\gets$ gerar-opções(fila-de-eventos);
+            \STATE opções-escolhidas $\gets$ deliberar(opções);
+            \STATE atualizar-intenções(opções-escolhidas);
+            \STATE executar();
+            \STATE buscar-novos-eventos-externos();
+            \STATE esquecer-atitutes-de-sucesso();
+            \STATE esquecer-atitudes-impossíveis();
+        \ENDWHILE
+    \end{algorithmic}
+\end{center}
+\caption[Algoritmo para representar um interpretador de agente BDI.]
+{\label{alg:BDIINTERPRETERALG} Algoritmo para representar um interpretador de
+agente BDI, utilizando os conceitos de crenças, desejos e intenções para a sua
+implementação.}
+\end{algorithm}
 
-As possíveis opções são escolhidas a cada novo ciclo, sendo sempre buscadas de
-uma fila de eventos ocorridos. Após, é escolhida uma opção a ser seguida,
-tornando-se então essa opção uma intenção do agente. Caso haja uma intenção a
-ser executada, o agente então a executa. A seguir, é atualizada a fila de
-eventos com os eventos externos ocorridos. Por fim, o agente esquece os desejos
-já obtidos, as intenções satisfeitas e os desejos e intenções impossíveis.
-
-Cabe ressaltar que tal arquitetura possui algumas limitações, como a
-incapacidade de fazer com que um agente BDI ``aprenda'' e adapte seu
-comportamento baseado no conhecimento obtido, além de não haver nenhuma
-consideração arquitetural sobre a modelagem de sistemas multi-agentes
-\cite{Georgeff:1998:BMA:648205.749450}, sendo assim necessário explorar
-outras técnicas caso seja necessário que o agente faça uso dessas
-características.
-
+O algoritmo, a cada novo ciclo de execução, busca as possíveis opções de uma
+fila de eventos. Das possíveis opções, uma é escolhida e torna-se então uma
+intenção do agente, que passa a ser executada. O agente também busca novos
+eventos externos ocorridos, preenchendo a fila de eventos. Por fim, são
+esquecidos os desejos já obtidos e as intenções satisfeitas, além de serem
+desconsiderados os desejos e intenções impossíveis.
 
 %----------
 \section{Planejamento}
