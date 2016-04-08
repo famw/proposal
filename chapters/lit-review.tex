@@ -293,17 +293,17 @@ onde se têm um número finito de ações possíveis e de percepções.
 Baseados na teoria do raciocínio prático proposto por Bratman \cite{Bratman87},
 os pesquisadores Rao e Georgeff propuseram a arquitetura de software de agentes
 BDI (sigla para \textit{Belief}, \textit{Desire}, \textit{Intention})
-\cite{bdi-icmas95}, permitindo representar agentes racionais através dessa
-arquitetura. A formalização de um agente BDI se dá através dos conceitos de \textbf{crenças}
+\cite{bdi-icmas95}, que permite a representação de agentes racionais. A
+formalização de um agente BDI se dá através dos conceitos de \textbf{crenças}
 (beliefs), \textbf{desejos} (desires) e \textbf{intenções} (intentions). As
-crenças são informações que o agente acredita saber sobre o ambiente.
-São chamadas de crenças pois podem não ser verdadeiras. Um agente pode
-atualizá-las e armazená-las em sua memória a cada nova percepção. Os desejos,
-por sua vez, representam os estados os quais um agente deseja atingir. Já as
-intenções representam o plano de ação que um agente BDI se compromete a executar
-na busca por seus desejos. Com estes três conceitos, é possível definir um
-algoritmo interpretador de agente BDI. O algoritmo a seguir mostra como é feito
-o uso desses conceitos:
+crenças são informações que o agente acredita saber sobre o ambiente.  São
+chamadas de crenças pois podem não ser verdadeiras. Um agente pode atualizá-las
+e armazená-las em sua memória a cada nova percepção. Os desejos, por sua vez,
+representam os estados os quais um agente deseja atingir. Já as intenções
+representam o plano de ação que um agente BDI se compromete a executar na busca
+por seus desejos. Com estes três conceitos, é possível definir um algoritmo
+interpretador de agente BDI. O algoritmo a seguir mostra como é feito o uso
+desses conceitos:
 
 \begin{algorithm}[htb]
 \begin{center}
