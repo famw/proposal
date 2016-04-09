@@ -1,14 +1,14 @@
 \chapter{\label{chap:lit-review}Revisão Bibliográfica}
 
 \section{Spelunky}
-Spelunky \cite{SPELUNKYWEB} é um jogo onde o jogador incorpora um aventureiro
-que decide explorar uma caverna misteriosa. O local contém tesouros, mas também
-está repleto de perigos. O objetivo principal do jogador é explorar estas
-cavernas subterrâneas e coletar a maior quantia de tesouros possível enquanto
-evita ser abatido pelos diversos inimigos e armadilhas espalhadas pelo ambiente.
-O jogo 2D segue o estilo \textit{platformer} - tipo de jogo que envolve guiar um
-personagem através de plataformas suspensas e obstáculos para obter progresso no
-jogo.
+Spelunky\footnote{http://www.spelunkyworld.com/original.html} é um jogo onde o
+jogador incorpora um aventureiro que decide explorar uma caverna misteriosa. O
+local contém tesouros, mas também está repleto de perigos. O objetivo principal
+do jogador é explorar estas cavernas subterrâneas e coletar a maior quantia de
+tesouros possível enquanto evita ser abatido pelos diversos inimigos e
+armadilhas espalhadas pelo ambiente.  O jogo 2D segue o estilo
+\textit{platformer} - tipo de jogo que envolve guiar um personagem através de
+plataformas suspensas e obstáculos para obter progresso no jogo.
 
 O jogo faz uso de alguns dos elementos-chave do gênero \textit{roguelike} --
 gênero de jogos que se tornou popular nos anos 80 caracterizado por sua
@@ -47,18 +47,20 @@ ficarão extremamente irritados e passarão a caçar o explorador com espingarda
 
 O jogo foi desenvolvido por Derek Yu - utilizando o motor de desenvolvimento de
 jogos \textit{GameMaker} (Versão 8.0 Pro) - e lançado gratuitamente para a
-plataforma \textit{Windows} em dezembro de 2008 \cite{SPELUNKYRELEASE}. No fim
-de 2009, o criador optou por liberar o código fonte do jogo, permitindo sua
-distribuição não-comercial e modificação \cite{SPELUNKYLICENSE}. A liberação do
-código fonte de Spelunky pode ser considerada um marco muito importante, pois
-permitiu que fossem criadas modificações para o jogo. Estas modificações, que
-podem ser encontradas no fórum oficial da
-\textit{Mossmouth}\footnote{Disponível em:
-http://mossmouth.com/forums/index.php} -- empresa desenvolvedora de jogos
-criada por Derek Yu --, são correções de \textit{bugs}, mapas customizados ou
-até mesmo modos de jogo completamente diferentes do jogo original. Pode-se
-dizer que dar esta liberdade para a comunidade do jogo é um dos fatores que
-ajuda a manter sua base de jogadores e atraem novos jogadores até hoje.
+plataforma \textit{Windows} em dezembro de
+2008\footnote{https://forums.tigsource.com/index.php?topic=4017}. No fim de
+2009, o criador optou por liberar o código fonte do jogo, permitindo sua
+distribuição não-comercial e
+modificação\footnote{http://www.spelunkyworld.com/files/COPYING.txt}. A
+liberação do código fonte de Spelunky pode ser considerada um marco muito
+importante, pois permitiu que fossem criadas modificações para o jogo. Estas
+modificações, que podem ser encontradas no fórum oficial da
+\textit{Mossmouth}\footnote{http://mossmouth.com/forums/index.php} -- empresa
+desenvolvedora de jogos criada por Derek Yu --, são correções de \textit{bugs},
+mapas customizados ou até mesmo modos de jogo completamente diferentes do jogo
+original. Pode-se dizer que dar esta liberdade para a comunidade do jogo é um
+dos fatores que ajuda a manter sua base de jogadores e atraem novos jogadores
+até hoje.
 
 O motor GameMaker disponibiliza diversas ferramentas que facilitam o trabalho
 do desenvolvedor. Contando com funcionalidades como editores de
@@ -66,10 +68,11 @@ do desenvolvedor. Contando com funcionalidades como editores de
 comportamentos dos elementos do jogo.} e de \textit{sprites}\footnote{Elementos
 visuais do jogo, tais como o personagem, o fundo, os inimigos. Representados
 como uma ou mais imagens, permitindo que as mesmas sejam animadas.},
-gerenciadores de eventos, entre outras \cite{GMAKER8DOCS}, o GameMaker oferece
-um ótimo suporte ao desenvolvedor para a criação de jogos. O motor
-disponibiliza uma linguagem de programação própria para seus \textit{scripts},
-a \textit{GameMaker Language}, ou \textit{GML}.
+gerenciadores de eventos, entre
+outras\footnote{http://sandbox.yoyogames.com/downloads/docs/gmaker80.pdf}, o
+GameMaker oferece um ótimo suporte ao desenvolvedor para a criação de jogos. O
+motor disponibiliza uma linguagem de programação própria para seus
+\textit{scripts}, a \textit{GameMaker Language}, ou \textit{GML}.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunky-pc-screen.png}
@@ -84,11 +87,12 @@ outros.} \end{figure}
 Existe uma relação mutuamente benéfica entre a área de inteligência artificial
 e jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
 técnicas e algoritmos de inteligência artificial com o intuito de enriquecer
-seu conteúdo. O jogo \textbf{Black \& White}, da desenvolvedora
-\textit{Lionhead Studios}, por exemplo, incorporou as técnicas de agentes BDI,
-árvores de decisão e redes neurais \footnote{Explicamos o funcionamento destas
-técnicas na seção \ref{section:agents}}  para ditar o comportamento de alguns
-seus personagens \cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da
+seu conteúdo. O jogo \textbf{Black \&
+White}\footnote{http://aigamedev.com/open/highlights/top-ai-games}, da
+desenvolvedora \textit{Lionhead Studios}, por exemplo, incorporou as técnicas
+de agentes BDI, árvores de decisão e redes neurais \footnote{Explicamos o
+funcionamento destas técnicas na seção \ref{section:agents}}  para ditar o
+comportamento de alguns seus personagens.  Já o jogo \textbf{F.E.A.R}, da
 desenvolvedora \textit{Monolith Productions}, utilizou os conceitos de
 planejamento para aumentar o realismo das decisões tomadas por seus agentes
 \cite{FEARPLANNING}.  Do outro lado, o campo da inteligência artificial se
@@ -96,7 +100,7 @@ beneficia ao utilizar os jogos como plataformas de teste para suas técnicas e
 algoritmos. Jogos digitais são atraentes para pesquisadores da área de
 inteligência artificial por uma série de fatores. Primeiro, eles capturam a
 complexidade de situações do mundo real, são relativamente simples e baratos de
-desenvolver, podem replicar inúmeras situações e ambientese até mesmo criar
+desenvolver, podem replicar inúmeras situações e ambientes e até mesmo criar
 cenários impossíveis ou impraticáveis no mundo real. Existem diversos gêneros
 de jogos, variando desde jogos educacionais até jogos de tiro em primeira
 pessoa. Segundo, jogos possuem a vantagem de serem programas de computador, o
@@ -108,12 +112,13 @@ a motivar os pesquisadores, além de resultar na adesão de novos pesquisadores.
 Tendo este apanhado de informações em mente, pesquisadores e entusiastas da
 área acabam desenvolvendo \textit{frameworks} de inteligência artificial em
 cima de jogos existentes para servir de plataforma de teste. Um exemplo desses
-frameworks é o \textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para
-o jogo \textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
-especificamente para pesquisa e experimentação, como foi o caso do projeto
-\textbf{TORCS, The Open Racing Car Simulator}, um simulador de corridas de
+frameworks é o \textbf{Brood War API}\footnote{bwapi.github.io}, um
+\textit{framework} para o jogo \textit{StarCraft: Brood War}. Algumas vezes,
+contudo, são criados jogos especificamente para pesquisa e experimentação, como
+foi o caso do projeto \textbf{TORCS, The Open Racing Car
+Simulator}\footnote{http://torcs.sourceforge.net/}, um simulador de corridas de
 carro que permite que desenvolvedores programem a inteligência de carros e
-compitam entre si \cite{TORCSWEB}.
+compitam entre si.
 
 \subsection{Competições de Inteligência Artificial em Jogos Digitais}
 Muitas vezes, os \textit{frameworks} de inteligência artificial desenvolvidos
@@ -127,22 +132,23 @@ Geralmente, o problema proposto é o de jogar o jogo de maneira mais eficiente.
 Para realizar uma avalição objetiva, são utilizadas métricas estipuladas pelo
 próprio jogo, como pontuação ou tempo. Muitas vezes, os organizadores da
 competição optam por fazer uso de um sistema de \textit{ranking}, expondo os
-resultados obtidos pelos candidatos. A competição \textbf{The General Video Game
-AI Competition}, que explora o problema de criar controladores genéricos de
-jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Às vezes, as competições fazem
-com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso é a
-competição que gira em torno de \textbf{Vindinium}, um jogo para a plataforma
-\textit{web} \cite{VINDINIUMWEB}.
+resultados obtidos pelos candidatos. A competição \textbf{The General Video
+Game AI Competition}\footnote{gvgai.net}, que explora o problema de criar
+controladores genéricos de jogos, faz uso deste mecanismo.  Às vezes, as
+competições fazem com que os candidatos joguem entre sí para avaliá-los.  Um
+exemplo disso é a competição que gira em torno de
+\textbf{Vindinium}\footnote{vindinium.org}, um jogo para a plataforma
+\textit{web}.
 
 Contudo, a proposta principal da disputa pode ser outra. A competição
 \textbf{Mario AI Competition}, por exemplo, possuia como uma de suas metas a
-criação de níveis interessantes para o jogo \cite{MARIOAIWEB}. Já a competição
-\textbf{2K Bot Prize} tinha como objetivo a criação de uma inteligência
-artificial para o jogo \textit{Unreal Tournament 2004} que pudesse enganar
-outros jogadores e fazê-los pensar que era um humano jogando
-\cite{UNREALAIWEB}. Neste tipo de torneio, a avaliação se dá de maneira
-subjetiva, visto que não existe uma métrica numérica para determinar diversão,
-por exemplo.
+criação de níveis interessantes para o jogo\footnote{marioai.org/home}. Já a
+competição \textbf{2K Bot Prize} tinha como objetivo a criação de uma
+inteligência artificial para o jogo \textit{Unreal Tournament 2004} que pudesse
+enganar outros jogadores e fazê-los pensar que era um humano
+jogando\footnote{http://www.aaai.org/Conferences/AIIDE/aiide.php}. Neste tipo
+de torneio, a avaliação se dá de maneira subjetiva, visto que não existe uma
+métrica numérica para determinar diversão, por exemplo.
 
 Os organizadores destas competições costumam, ao término da disputa,
 disponibilizar os códigos-fonte de todos os candidatos. Assim, em versões
@@ -153,24 +159,24 @@ solução que funcionou em um ano pode vir a não funcionar tão bem ou até mes
 falhar no ano seguinte, tendo em vista que o código será dissecado pelos seus
 rivais. Os resultados das competições costumam ser divulgados também em
 conferências como \textit{IEEE Computational Intelligence and
-Games}\footnote{Disponível em: http://www.ieee-cig.org} \textit{(CIG)} e
-\textit{AAAI Artificial Intelligence in Interactive Digital
-Entertainment}\footnote{Disponível em:
-http://www.aaai.org/Conferences/AIIDE/aiide.php} \textit{(AIIDE)}, além de
-conferências dedicadas a computação evolutiva, \textit{game design},
-aprendizado de máquina, entre outras.
+Games}\footnote{http://www.ieee-cig.org} \textit{(CIG)} e \textit{AAAI
+Artificial Intelligence in Interactive Digital
+Entertainment}\footnote{http://www.aaai.org/Conferences/AIIDE/aiide.php}
+\textit{(AIIDE)}, além de conferências dedicadas a computação evolutiva,
+\textit{game design}, aprendizado de máquina, entre outras.
 
 
 %----------
 \section{SpelunkBots}
 Utilizando o código-fonte de Spelunky, Daniel Scales e Thomas Thompson, da
-Universidade de Derby no Reino Unido, criaram o \textit{SpelunkBots}
-\cite{SPELUNKBOTSWEB}, um \textit{framework} que permite a programação de
-\textit{bots} para o jogo Spelunky. Um dos objetivos dos criadores é utilizar a
-aplicação para criar uma competição de inteligência artificial para o jogo. A
-aplicação se comunica com o código-fonte original e permite a utilização das
-linguagens \textit{GML} (padrão do GameMaker) e \textit{C++} para a descrição
-do comportamento de \textit{bots}.
+Universidade de Derby no Reino Unido, criaram o
+\textit{SpelunkBots}\footnote{http://www.spelunkbots.com}, um
+\textit{framework} que permite a programação de \textit{bots} para o jogo
+Spelunky. Um dos objetivos dos criadores é utilizar a aplicação para criar uma
+competição de inteligência artificial para o jogo. A aplicação se comunica com
+o código-fonte original e permite a utilização das linguagens \textit{GML}
+(padrão do GameMaker) e \textit{C++} para a descrição do comportamento de
+\textit{bots}.
 
 A \textit{API} possibilita que o desenvolvedor resgate informações de objetos
 estáticos e dinâmicos contidos no ambiente do jogo, como o terreno do jogo ou a
