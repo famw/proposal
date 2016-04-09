@@ -12,13 +12,13 @@ jogo.
 
 O jogo faz uso de alguns dos elementos-chave do gênero \textit{roguelike} --
 gênero de jogos que se tornou popular nos anos 80 caracterizado por sua
-dificuldade extrema, enfoque em exploração de ambientes e narrativa fantasiosa
---, como \textbf{geração procedural} e \textbf{morte permanente}. Os níveis em
-Spelunky são gerados proceduralmente - ou seja, utiliza um algoritmo capaz de
-gerar automáticamente os elementos que irão compor o nível - fazendo com que
-cada partida seja única. Isto significa que não existe uma maneira de se
-memorizar estratégias específicas de um mapa em Spelunky, pois ao início de cada
-partida o mapa é gerado de maneira única e os tesouros, itens e obstáculos são
+dificuldade, enfoque em exploração de ambientes e narrativa fantasiosa --, como
+\textbf{geração procedural} e \textbf{morte permanente}. Os níveis em Spelunky
+são gerados proceduralmente - ou seja, utiliza um algoritmo capaz de gerar
+automáticamente os elementos que irão compor o nível - fazendo com que cada
+partida seja única. Isto significa que não existe uma maneira de se memorizar
+estratégias específicas de um mapa em Spelunky, pois ao início de cada partida
+o mapa é gerado de maneira única e os tesouros, itens e obstáculos são
 dispostos de maneira diferente, fazendo com que o jogador tenha que aprender a
 lidar com os elementos de forma individual, combinar este conhecimento e
 estabelecer uma estratégia para vencer seus obstáculos e ser bem sucedido. Além
@@ -81,38 +81,39 @@ outros.} \end{figure}
 %----------
 \section{Plataformas de Testes para Inteligência Artificial}
 
-Existe uma relação mutuamente benéfica entre a área de inteligência artificial e
-jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
-técnicas e algoritmos de inteligência artificial com o intuito de enriquecer seu
-conteúdo. O jogo \textbf{Black \& White}, da desenvolvedora \textit{Lionhead
-Studios}, por exemplo, incorporou as técnicas de agentes BDI, árvores de decisão
-e redes neurais \footnote{Explicamos o funcionamento destas técnicas na seção
-\ref{section:agents}}  para ditar o comportamento de alguns seus personagens
-\cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da desenvolvedora
-\textit{Monolith Productions}, utilizou os conceitos de planejamento para
-aumentar o realismo das decisões tomadas por seus agentes \cite{FEARPLANNING}.
-Do outro lado, o campo da inteligência artificial se beneficia ao utilizar os
-jogos como plataformas de teste para suas técnicas e algoritmos. Jogos digitais
-são atraentes para pesquisadores da área de inteligência artificial porque
-capturam a complexidade de situações do mundo real, são relativamente simples e
-baratos de desenvolver, podem replicar inúmeras situações e ambientes -- existem
-diversos gêneros de jogos, variando desde jogos educacionais até jogos de tiro
-em primeira pessoa -- e até mesmo criar cenários impossíveis ou impraticáveis no
-mundo real. Ademais, possuem a vantagem de serem programas de computador, o que
-significa que, por muitas vezes, podem acelerar a velocidade na qual testes são
-executados, ou ainda executar múltiplos testes em paralelo. A natureza lúdica
-dos jogos também são um ponto importante a ser ressaltado, pois ajudam a motivar
-os pesquisadores, além de resultar na adesão de novos pesquisadores.
+Existe uma relação mutuamente benéfica entre a área de inteligência artificial
+e jogos digitais.  De um lado, os jogos se beneficiam explorando conceitos,
+técnicas e algoritmos de inteligência artificial com o intuito de enriquecer
+seu conteúdo. O jogo \textbf{Black \& White}, da desenvolvedora
+\textit{Lionhead Studios}, por exemplo, incorporou as técnicas de agentes BDI,
+árvores de decisão e redes neurais \footnote{Explicamos o funcionamento destas
+técnicas na seção \ref{section:agents}}  para ditar o comportamento de alguns
+seus personagens \cite{TOPAIGAMES}.  Já o jogo \textbf{F.E.A.R}, da
+desenvolvedora \textit{Monolith Productions}, utilizou os conceitos de
+planejamento para aumentar o realismo das decisões tomadas por seus agentes
+\cite{FEARPLANNING}.  Do outro lado, o campo da inteligência artificial se
+beneficia ao utilizar os jogos como plataformas de teste para suas técnicas e
+algoritmos. Jogos digitais são atraentes para pesquisadores da área de
+inteligência artificial por uma série de fatores. Primeiro, eles capturam a
+complexidade de situações do mundo real, são relativamente simples e baratos de
+desenvolver, podem replicar inúmeras situações e ambientese até mesmo criar
+cenários impossíveis ou impraticáveis no mundo real. Existem diversos gêneros
+de jogos, variando desde jogos educacionais até jogos de tiro em primeira
+pessoa. Segundo, jogos possuem a vantagem de serem programas de computador, o
+que significa que, por muitas vezes, podem acelerar a velocidade na qual testes
+são executados, ou ainda executar múltiplos testes em paralelo. Finalmente, a
+natureza lúdica dos jogos são um ponto importante a ser ressaltado, pois ajudam
+a motivar os pesquisadores, além de resultar na adesão de novos pesquisadores.
 
-Tendo este apanhado de informações em mente, pesquisadores e entusiastas da área
-acabam desenvolvendo \textit{frameworks} de inteligência artificial em cima de
-jogos existentes para servir de plataforma de teste. Um exemplo disso é o
-\textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para o jogo
-\textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
-especificamente para isso, como foi o caso do projeto \textbf{TORCS, The Open
-Racing Car Simulator}, um simulador de corridas de carro que permite que
-desenvolvedores programem a inteligência de carros e compitam entre si
-\cite{TORCSWEB}.
+Tendo este apanhado de informações em mente, pesquisadores e entusiastas da
+área acabam desenvolvendo \textit{frameworks} de inteligência artificial em
+cima de jogos existentes para servir de plataforma de teste. Um exemplo desses
+frameworks é o \textbf{Brood War API} \cite{BWAPI}, um \textit{framework} para
+o jogo \textit{StarCraft: Brood War}. Algumas vezes, contudo, são criados jogos
+especificamente para pesquisa e experimentação, como foi o caso do projeto
+\textbf{TORCS, The Open Racing Car Simulator}, um simulador de corridas de
+carro que permite que desenvolvedores programem a inteligência de carros e
+compitam entre si \cite{TORCSWEB}.
 
 \subsection{Competições de Inteligência Artificial em Jogos Digitais}
 Muitas vezes, os \textit{frameworks} de inteligência artificial desenvolvidos
@@ -129,7 +130,7 @@ competição optam por fazer uso de um sistema de \textit{ranking}, expondo os
 resultados obtidos pelos candidatos. A competição \textbf{The General Video Game
 AI Competition}, que explora o problema de criar controladores genéricos de
 jogos, faz uso deste mecanismo \cite{GVGAIWEB}.  Às vezes, as competições fazem
-com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso seria a
+com que os candidatos joguem entre sí para avaliá-los.  Um exemplo disso é a
 competição que gira em torno de \textbf{Vindinium}, um jogo para a plataforma
 \textit{web} \cite{VINDINIUMWEB}.
 
@@ -151,12 +152,13 @@ candidatos duelam entre sí tendem a aumentar a competitividade, pois uma
 solução que funcionou em um ano pode vir a não funcionar tão bem ou até mesmo
 falhar no ano seguinte, tendo em vista que o código será dissecado pelos seus
 rivais. Os resultados das competições costumam ser divulgados também em
-conferências como \textit{IEEE Computational Intelligence and Games (CIG)} e
-\textit{AAAI Artificial Intelligence in Interactive Digital Entertainment
-(AAIDE)}, além de conferências dedicadas a computação evolutiva, \textit{game
-design}, aprendizado de máquina, entre outras. Algumas competições costumam
-oferecer prêmios em dinheiro para os melhores colocados, como forma de
-incentivo.
+conferências como \textit{IEEE Computational Intelligence and
+Games}\footnote{Disponível em: http://www.ieee-cig.org} \textit{(CIG)} e
+\textit{AAAI Artificial Intelligence in Interactive Digital
+Entertainment}\footnote{Disponível em:
+http://www.aaai.org/Conferences/AIIDE/aiide.php} \textit{(AIIDE)}, além de
+conferências dedicadas a computação evolutiva, \textit{game design},
+aprendizado de máquina, entre outras.
 
 
 %----------
@@ -180,7 +182,7 @@ limitando o conhecimento do ambiente que pode ser obtido pela inteligência
 artificial.  Para objetos estáticos, uma vez que o jogador visualizou o objeto
 ele poderá receber informações sobre ele permanentemente. Para objetos
 dinâmicos, o \textit{bot} só poderá receber informações sobre eles se os mesmos
-estiverem sendo visualizados por ele. A imagem \ref{fig:spelunkbots-fow} ilustra
+estiverem sendo visualizados por ele. A figura \ref{fig:spelunkbots-fow} ilustra
 um exemplo de funcionamento do sistema.
 
 \begin{figure}[htb!]
@@ -288,7 +290,7 @@ de \textbf{estático}. Se o ambiente não muda de acordo com o tempo, mas o
 agente muda sua maneira de agir (melhorando sua atuação, por exemplo), chamamos
 o ambiente de \textbf{semi-dinâmico}. Por fim, classificamos os ambientes como
 \textbf{discretos} ou \textbf{contínuos}, sendo ambientes discretos aqueles
-onde se têm um número finito de ações possíveis e de percepções.
+onde se têm um número contável de ações possíveis e de percepções.
 
 \subsection{Agentes BDI}
 Baseados na teoria do raciocínio prático proposto por Bratman \cite{Bratman199903},
@@ -356,7 +358,7 @@ ambiente e após executar uma ação, seus efeitos modifiquem o estado do
 ambiente. O uso de uma linguagem formal nessa tarefa permite expressar os
 componentes do planejador de uma maneira que possibilite a realização de
 operações sobre tais conjecturas, facilitando o processo de geração de um
-plano. Um dos primeiros planejadores a surgir foi o STRIPS
+plano. Um dos primeiros planejadores desenvolvidos foi o STRIPS
 \cite{Fikes:1971:SNA:1622876.1622939}, em $1971$. Este planejador é utilizado
 como referência para a solução de muitos problemas de planejamento até hoje.
 
