@@ -6,9 +6,16 @@ jogador incorpora um aventureiro que decide explorar uma caverna misteriosa. O
 local contém tesouros, mas também está repleto de perigos. O objetivo principal
 do jogador é explorar estas cavernas subterrâneas e coletar a maior quantia de
 tesouros possível enquanto evita ser abatido pelos diversos inimigos e
-armadilhas espalhadas pelo ambiente.  O jogo 2D segue o estilo
-\textit{platformer} - tipo de jogo que envolve guiar um personagem através de
-plataformas suspensas e obstáculos para obter progresso no jogo.
+armadilhas espalhadas pelo ambiente.  A Figura \ref{fig:spelunky-gameplay}
+ilustra uma partida do jogo, que segue o estilo \textit{platformer} - tipo de
+jogo que envolve guiar um personagem através de plataformas suspensas e
+obstáculos para obter progresso no jogo.
+
+\begin{figure}[htb!]
+\centering\includegraphics[width=.65\textwidth]{fig/spelunky-pc-screen.png}
+\caption {\label{fig:spelunky-gameplay}Exemplo de partida de spelunky, mostrando
+elementos do jogo como o jogador, a caverna, os inimigos, os tesouros, entre
+outros.} \end{figure}
 
 O jogo faz uso de alguns dos elementos-chave do gênero \textit{roguelike} --
 gênero de jogos que se tornou popular nos anos 80 caracterizado por sua
@@ -73,12 +80,6 @@ outras\footnote{http://sandbox.yoyogames.com/downloads/docs/gmaker80.pdf}, o
 GameMaker oferece um ótimo suporte ao desenvolvedor para a criação de jogos. O
 motor disponibiliza uma linguagem de programação própria para seus
 \textit{scripts}, a \textit{GameMaker Language}, ou \textit{GML}.
-
-\begin{figure}[htb!]
-\centering\includegraphics[width=.65\textwidth]{fig/spelunky-pc-screen.png}
-\caption {\label{fig:spelunky-gameplay}Exemplo de partida de spelunky, mostrando
-elementos do jogo como o jogador, a caverna, os inimigos, os tesouros, entre
-outros.} \end{figure}
 
 
 %----------
@@ -188,7 +189,7 @@ limitando o conhecimento do ambiente que pode ser obtido pela inteligência
 artificial.  Para objetos estáticos, uma vez que o jogador visualizou o objeto
 ele poderá receber informações sobre ele permanentemente. Para objetos
 dinâmicos, o \textit{bot} só poderá receber informações sobre eles se os mesmos
-estiverem sendo visualizados por ele. A figura \ref{fig:spelunkbots-fow} ilustra
+estiverem sendo visualizados por ele. A Figura \ref{fig:spelunkbots-fow} ilustra
 um exemplo de funcionamento do sistema.
 
 \begin{figure}[htb!]
@@ -216,10 +217,12 @@ acelerar ou desacelerar a partida. Isto facilitaria a implementação de uma
 abordagem focada em aprendizado de máquina, pois aceleraria o processo de
 aprendizado. O \textit{framework} oferece ao desenvolvedor a capacidade de
 visualizar informações importantes -- como, por exemplo, o estado do
-\textit{bot}, sua trajetória e o ambiente -- diretamente na tela do jogo,
-enquanto o programa está em execução. Os criadores da competição disponibilizam
-alguns \textit{bots} e níveis básicos para exemplificar a utilização da
-\textit{API}, fornecendo, assim, uma base inicial aos competidores.
+\textit{bot}, sua trajetória e o ambiente -- diretamente na tela do jogo
+enquanto o programa está em execução. A Figura
+\ref{fig:spelunkbots-debug-screen} demonstra o uso desta funcionalidade. Os
+criadores da competição disponibilizam alguns \textit{bots} e níveis básicos
+para exemplificar a utilização da \textit{API}, fornecendo, assim, uma base
+inicial aos competidores.
 
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{fig/spelunkbots-debug-screen.png}
